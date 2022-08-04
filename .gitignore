@@ -22,6 +22,9 @@
 #Ds store
 *.DS_STORE
 
+#default-2021.dwlt
+default-2021.dwlt
+
 # Visual Studio cache directory
 .vs/
 
