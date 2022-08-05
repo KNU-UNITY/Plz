@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a49cddd0b347448a6eec7b7e672b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: a44013bc04e47494eb4ed7176dcf64f2, type: 2}
+  stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
   enemyPrefab: {fileID: 4796747783846037301, guid: 32f050609fd45dd4299f9568d1407eb6, type: 3}
   enemyHPSliderPrefab: {fileID: 2921216230706463152, guid: bba10abeb2e3fc34baa0ecc5c156c3cd, type: 3}
   canvasTransform: {fileID: 701674209}
@@ -2536,7 +2536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a44f558663d89c4ca35216de8073171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: a44013bc04e47494eb4ed7176dcf64f2, type: 2}
+  stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
   alertLinePrefab: {fileID: 8882113136356876340, guid: 8ded3570a7ec9d54cb49860ee62bbdef, type: 3}
   meteoritePrefab: {fileID: 2484238494524138101, guid: c7357bc776076da4683543d58aa34548, type: 3}
   minSpawnTime: 1

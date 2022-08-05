@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5610d826ee00a945b4280b118649f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!114 &-8032478920489859851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,4 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49dc6a4023fdcc345be7fdbe8e87f65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: a44013bc04e47494eb4ed7176dcf64f2, type: 2}
+  stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
