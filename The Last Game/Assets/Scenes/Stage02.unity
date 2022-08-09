@@ -451,14 +451,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
-  enemyPrefab: {fileID: 4796747783846037301, guid: 32f050609fd45dd4299f9568d1407eb6, type: 3}
+  enemyPrefab: {fileID: 4796747783846037301, guid: 5b60942d120ac574785e9793c149251d, type: 3}
   enemyHPSliderPrefab: {fileID: 2921216230706463152, guid: bba10abeb2e3fc34baa0ecc5c156c3cd, type: 3}
   canvasTransform: {fileID: 701674209}
   bgmController: {fileID: 1527795282}
   textBossWarning: {fileID: 1495626969}
   panelBossHP: {fileID: 1695607323}
   boss: {fileID: 1827710601}
-  spawnTime: 0.35
+  spawnTime: 0.3
   maxEnemyCount: 100
 --- !u!4 &191006093
 Transform:
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccef9703f3ec5242993d163b70833e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
+  projectilePrefab: {fileID: 3036986315938941631, guid: c17941f6b05ed224ca37ab624c6a5c57, type: 3}
   attackRate: 0.1
   maxAttackLevel: 4
   boomPrefab: {fileID: 8210924418869867313, guid: 97f0e5346abc9204d97de8d247390804, type: 3}
@@ -2059,12 +2059,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 496789542, guid: 235b69d1f98cb364ab3c99ca37f646c4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -1524282860, guid: a73500cef3658f14a9c9e09fc0810fcd, type: 3}
+  m_Color: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.69, y: 0.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2116,8 +2116,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.71, y: 0.49}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.69, y: 0.68}
+    newSize: {x: 0.69, y: 0.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
