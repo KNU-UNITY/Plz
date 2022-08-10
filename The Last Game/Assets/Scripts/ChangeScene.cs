@@ -14,9 +14,9 @@ public class ChangeScene : MonoBehaviour
 
     public void ChangeScenebtn()
     {
-        if(this.gameObject.name=="Continue")
-            gm.GameReset();
+        // if(this.gameObject.name=="Continue")
+        //     gm.GameReset();
         
-        SceneManager.LoadScene("SampleScene");
+        // SceneManager.LoadScene("SampleScene");
     }
 }

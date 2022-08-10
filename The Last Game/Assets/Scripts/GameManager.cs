@@ -22,13 +22,13 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI questText;
     public ObjData obj;
 
-    private void Start()
-    {
-        if(!PlayerPrefs.HasKey("PlayerX"))
-            return;
-        GameLoad();
-        questText.text = questManager.CheckQuest();
-    }
+    // private void Start()
+    // {
+    //     if(!PlayerPrefs.HasKey("PlayerX"))
+    //         return;
+    //     GameLoad();
+    //     questText.text = questManager.CheckQuest();
+    // }
 
     void Update()
     {
