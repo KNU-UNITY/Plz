@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
             }
         }
         else{
-            charNameText.text = "루나";
+            charNameText.text = "";
             talk.SetMsg(talkData);
             portraitImg.color = new Color(1,1,1,0);
         }
@@ -101,46 +101,46 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void GameSave()
-    {
-        PlayerPrefs.SetFloat("PlayerX",player.transform.position.x);
-        PlayerPrefs.SetFloat("PlayerY",player.transform.position.y);
-        PlayerPrefs.SetInt("QustId",questManager.questId);
-        PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
-        PlayerPrefs.Save();
+    // public void GameSave()
+    // {
+    //     PlayerPrefs.SetFloat("PlayerX",player.transform.position.x);
+    //     PlayerPrefs.SetFloat("PlayerY",player.transform.position.y);
+    //     PlayerPrefs.SetInt("QustId",questManager.questId);
+    //     PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
+    //     PlayerPrefs.Save();
 
-        menuSet.SetActive(false);
+    //     menuSet.SetActive(false);
 
-    }
+    // }
 
-    public void GameLoad()
-    {
-        float x = PlayerPrefs.GetFloat("PlayerX");
-        float y = PlayerPrefs.GetFloat("PlayerY");
-        int questId = PlayerPrefs.GetInt("QustId");
-        int questActionIndex = PlayerPrefs.GetInt("QustActionIndex");
+    // public void GameLoad()
+    // {
+    //     float x = PlayerPrefs.GetFloat("PlayerX");
+    //     float y = PlayerPrefs.GetFloat("PlayerY");
+    //     int questId = PlayerPrefs.GetInt("QustId");
+    //     int questActionIndex = PlayerPrefs.GetInt("QustActionIndex");
 
-        player.transform.position = new Vector3(x,y,0);
-        questManager.questId = questId;
-        questManager.questActionIndex = questActionIndex;
-        questManager.ControlObject();
-    }
+    //     player.transform.position = new Vector3(x,y,0);
+    //     questManager.questId = questId;
+    //     questManager.questActionIndex = questActionIndex;
+    //     questManager.ControlObject();
+    // }
 
-    public void GameExit()
-    {
-        Application.Quit();
-    }
+    // public void GameExit()
+    // {
+    //     Application.Quit();
+    // }
 
-    public void GameReset()
-    {
-        float x = 0;
-        float y = 0;
-        int questId = 0;
-        int questActionIndex = 0;
-        player.transform.position = new Vector3(x,y,0);
-        questManager.questId = questId;
-        questManager.questActionIndex = questActionIndex;
-        questManager.ControlObject();
-    }
+    // public void GameReset()
+    // {
+    //     float x = 0;
+    //     float y = 0;
+    //     int questId = 0;
+    //     int questActionIndex = 0;
+    //     player.transform.position = new Vector3(x,y,0);
+    //     questManager.questId = questId;
+    //     questManager.questActionIndex = questActionIndex;
+    //     questManager.ControlObject();
+    // }
 
 }
