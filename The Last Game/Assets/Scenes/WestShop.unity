@@ -351,6 +351,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255583018}
   m_CullTransparentMesh: 1
+--- !u!1 &306972795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306972797}
+  - component: {fileID: 306972796}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &306972796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306972795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f84c08594d4ba54bb3a628104a2173a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coin: 9999
+  itemsCount: 00000000000000000000000000000000
+--- !u!4 &306972797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306972795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 677.6341, y: -237.4713, z: -0.37623847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310160565
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +619,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 374937632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554011533}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &374937632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +815,7 @@ GameObject:
   - component: {fileID: 452827305}
   - component: {fileID: 452827304}
   m_Layer: 6
-  m_Name: Shop2
+  m_Name: Page2
   m_TagString: Shop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1316,7 +1374,7 @@ GameObject:
   - component: {fileID: 759333304}
   - component: {fileID: 759333303}
   m_Layer: 6
-  m_Name: Shop1
+  m_Name: Page1
   m_TagString: Shop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1504,7 +1562,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875643526
 GameObject:
@@ -2017,7 +2075,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1028236084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554011533}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1028236084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2278,7 +2348,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1049732925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554011533}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1049732925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3285,7 +3367,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1466363008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554011533}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1466363008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3356,13 +3450,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d1fd0a5437b104a9222f2a5923b217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 306972796}
   Pages:
   - {fileID: 759333302}
   - {fileID: 452827303}
   pageIndex: 0
-  GM: {fileID: 0}
-  items: []
-  ItemPrice: 
+  ItemPrice: 96000000640000006400000064000000
 --- !u!114 &1554011534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3439,7 +3532,7 @@ RectTransform:
   - {fileID: 759333305}
   - {fileID: 452827306}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

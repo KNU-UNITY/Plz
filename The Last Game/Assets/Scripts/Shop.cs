@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    //아이템 [포션,쉴드,파워 업,트리플]
+    public GameManager gameManager;
     public GameObject[] Pages;
     public int pageIndex;
-    public GameManager GM;
-    public GameObject[] items;
     public int[] ItemPrice;
 
     //상점 페이지 앞으로 넘기기
@@ -33,13 +33,14 @@ public class Shop : MonoBehaviour
         }
     }
     //Buy Item
-    void Buy(int index)
+    public void Buy(int index)
     {
         int price = ItemPrice[index];
-        if (GM.coin >= price)  //가진 돈이 충분할 경우
+        if (gameManager.Coin >= price)  //가진 돈이 충분할 경우
         {
-            GM.coin -= price;
-            GM.itemsCount[index]++;
+            gameManager.Coin -= price;
+            gameManager.itemsCount[index]++;
         }
+        //Debug.Log(price);
     }
 }
