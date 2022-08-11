@@ -33,6 +33,11 @@ public class Enemy : MonoBehaviour
             collision.GetComponent<PlayerHP>().TakeDamage(damage);
             Destroy(gameObject);
         }
+        else if (collision.CompareTag("Shield"))
+        {
+            Destroy(gameObject);
+        }
+
     }
     public void OnDie()
     {
@@ -63,14 +68,14 @@ public class Enemy : MonoBehaviour
             Instantiate(itemPrefabs[3], transform.position, Quaternion.identity);
         }
     }
-    private void Update()
-    {
-        if (shootTimer > shootDelay)
-        {
-            enemyWeapon.StartFiring();
-            shootTimer = 0;
-        }
-        shootTimer += Time.deltaTime;
+    //private void Update()
+    //{
+    //    if (shootTimer > shootDelay)
+    //    {
+    //        enemyWeapon.StartFiring();
+    //        shootTimer = 0;
+    //    }
+    //    shootTimer += Time.deltaTime;
 
-    }
+    //}
 }
