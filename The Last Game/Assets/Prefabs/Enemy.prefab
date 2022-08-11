@@ -134,11 +134,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   scorePoint: 100
+  coinPoint: 10
   explosionPrefab: {fileID: 2380583968862850341, guid: e485cca98465c6147b994c60f8160040, type: 3}
   itemPrefabs:
   - {fileID: 6494921653000936975, guid: 37914f3acbf3ac146b5992b1a27a6fd5, type: 3}
   - {fileID: 6367791470609480280, guid: 64d7b9f655dc6cf4cbc8b2825f350afd, type: 3}
   - {fileID: 3799666668139570773, guid: 0dd299c32c363a24bbd2cf4e8008e7d3, type: 3}
+  - {fileID: 3799666668139570773, guid: 42c3bcfc48d35e247990420a260c48cc, type: 3}
   shootDelay: 2
 --- !u!114 &-6616884004843854147
 MonoBehaviour:
