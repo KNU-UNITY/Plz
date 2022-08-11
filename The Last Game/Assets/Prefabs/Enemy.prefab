@@ -139,6 +139,7 @@ MonoBehaviour:
   - {fileID: 6494921653000936975, guid: 37914f3acbf3ac146b5992b1a27a6fd5, type: 3}
   - {fileID: 6367791470609480280, guid: 64d7b9f655dc6cf4cbc8b2825f350afd, type: 3}
   - {fileID: 3799666668139570773, guid: 0dd299c32c363a24bbd2cf4e8008e7d3, type: 3}
+  shootDelay: 2
 --- !u!114 &-6616884004843854147
 MonoBehaviour:
   m_ObjectHideFlags: 0

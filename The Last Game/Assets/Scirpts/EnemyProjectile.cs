@@ -19,7 +19,7 @@ public class EnemyProjectile : MonoBehaviour
     }
     public void Ondie()
     {
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        //Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
     }

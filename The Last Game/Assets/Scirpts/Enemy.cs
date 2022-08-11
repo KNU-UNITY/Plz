@@ -12,12 +12,16 @@ public class Enemy : MonoBehaviour
     private GameObject explosionPrefab;
     [SerializeField]
     private GameObject[] itemPrefabs;
-
+    [SerializeField]
+    private float shootDelay=1.0f;
+    private float shootTimer = 0;
+    private EnemyWeapon enemyWeapon;
     private PlayerController playerController;
 
     private void Awake()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        enemyWeapon = GetComponent<EnemyWeapon>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,5 +55,15 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(itemPrefabs[2], transform.position, Quaternion.identity);
         }
+    }
+    private void Update()
+    {
+        if (shootTimer > shootDelay)
+        {
+            enemyWeapon.StartFiring();
+            shootTimer = 0;
+        }
+        shootTimer += Time.deltaTime;
+
     }
 }
