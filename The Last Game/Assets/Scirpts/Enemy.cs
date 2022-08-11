@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
         }
         else if (collision.CompareTag("Shield"))
         {
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
 

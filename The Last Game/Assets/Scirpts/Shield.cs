@@ -11,9 +11,10 @@ public class Shield : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
-        else if(collision.CompareTag("Boss"))
+        else if (collision.CompareTag("Boss"))
         {
             Destroy(gameObject);
         }
