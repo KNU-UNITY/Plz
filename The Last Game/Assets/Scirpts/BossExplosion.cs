@@ -18,6 +18,8 @@ public class BossExplosion : MonoBehaviour
     {
         playerController.Score += 10000;
         PlayerPrefs.SetInt("Score", playerController.Score);
+        playerController.Coin += 1000;
+        PlayerPrefs.SetInt("Coin", playerController.Coin);
         SceneManager.LoadScene(sceneName);
     }
 }

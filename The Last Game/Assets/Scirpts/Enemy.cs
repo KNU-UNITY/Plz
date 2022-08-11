@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int scorePoint = 100;
     [SerializeField]
+    private int coinPoint = 10;
+    [SerializeField]
     private GameObject explosionPrefab;
     [SerializeField]
     private GameObject[] itemPrefabs;
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour
     public void OnDie()
     {
         playerController.Score += scorePoint;
+        playerController.Coin += coinPoint;
 
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         SpawnItem();
@@ -54,6 +57,10 @@ public class Enemy : MonoBehaviour
         else if(spawnItem<12)
         {
             Instantiate(itemPrefabs[2], transform.position, Quaternion.identity);
+        }
+        else if(spawnItem<20)
+        {
+            Instantiate(itemPrefabs[3], transform.position, Quaternion.identity);
         }
     }
     private void Update()

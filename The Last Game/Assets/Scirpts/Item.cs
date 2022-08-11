@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum ItemType { PowerUp =0,Boom,HP}
+public enum ItemType { PowerUp =0,Boom,HP,Coin}
 
 public class Item : MonoBehaviour
 {
     [SerializeField]
     private ItemType itemType;
     private Movement2D movement2D;
-
+    private PlayerController playerController;
     private void Awake()
     {
         movement2D = GetComponent<Movement2D>();
@@ -38,6 +38,9 @@ public class Item : MonoBehaviour
                 break;
             case ItemType.HP:
                 player.GetComponent<PlayerHP>().CurrentHP+=2;
+                break;
+            case ItemType.Coin:
+                player.GetComponent<PlayerController>().Coin += 100;
                 break;
         }
     }

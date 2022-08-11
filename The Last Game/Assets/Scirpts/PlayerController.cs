@@ -24,6 +24,12 @@ public class PlayerController : MonoBehaviour
         set => score = Mathf.Max(0, value);
         get => score;
     }
+    private int coin;
+    public int Coin
+    {
+        set => coin = Mathf.Max(0, value);
+        get => coin;
+    }
 
     private void Awake()
     {
@@ -73,6 +79,7 @@ public class PlayerController : MonoBehaviour
     public void OnDieEvent()
     {
         PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.SetInt("Coin", coin);
         SceneManager.LoadScene(nextSceneName);
     }
 }
