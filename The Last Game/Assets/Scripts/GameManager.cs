@@ -22,23 +22,29 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI questText;
     public ObjData obj;
 
-    // private void Start()
-    // {
-    //     if(!PlayerPrefs.HasKey("PlayerX"))
-    //         return;
-    //     GameLoad();
-    //     questText.text = questManager.CheckQuest();
-    // }
+    void Start()
+    {
+        if (!PlayerPrefs.HasKey("PlayerX"))
+            return;
+        GameLoad();
+         questText.text = questManager.CheckQuest();
+     }
 
     void Update()
     {
         //Submenu
         if(Input.GetButtonDown("Cancel"))
         {
-            if(menuSet.activeSelf)
-            menuSet.SetActive(false);
+            if (menuSet.activeSelf)
+            {
+                menuSet.SetActive(false);
+                Time.timeScale = 1;
+            }
             else
-            menuSet.SetActive(true);
+            {
+                menuSet.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
     }
 
@@ -101,46 +107,50 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // public void GameSave()
-    // {
-    //     PlayerPrefs.SetFloat("PlayerX",player.transform.position.x);
-    //     PlayerPrefs.SetFloat("PlayerY",player.transform.position.y);
-    //     PlayerPrefs.SetInt("QustId",questManager.questId);
-    //     PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
-    //     PlayerPrefs.Save();
+     public void GameSave()
+     {
+         PlayerPrefs.SetFloat("PlayerX",player.transform.position.x);
+         PlayerPrefs.SetFloat("PlayerY",player.transform.position.y);
+         PlayerPrefs.SetInt("QustId",questManager.questId);
+         PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
+         PlayerPrefs.Save();
+         menuSet.SetActive(false);
 
-    //     menuSet.SetActive(false);
+     }
 
-    // }
+     public void GameLoad()
+     {
+        // if (!PlayerPrefs.HasKey("PlayerX"))
+         //   return;
 
-    // public void GameLoad()
-    // {
-    //     float x = PlayerPrefs.GetFloat("PlayerX");
-    //     float y = PlayerPrefs.GetFloat("PlayerY");
-    //     int questId = PlayerPrefs.GetInt("QustId");
-    //     int questActionIndex = PlayerPrefs.GetInt("QustActionIndex");
+         float x = PlayerPrefs.GetFloat("PlayerX");
+         float y = PlayerPrefs.GetFloat("PlayerY");
+         int questId = PlayerPrefs.GetInt("QustId");
+         int questActionIndex = PlayerPrefs.GetInt("QustActionIndex");
 
-    //     player.transform.position = new Vector3(x,y,0);
-    //     questManager.questId = questId;
-    //     questManager.questActionIndex = questActionIndex;
-    //     questManager.ControlObject();
-    // }
+         player.transform.position = new Vector3(x,y,0);
+         questManager.questId = questId;
+         questManager.questActionIndex = questActionIndex;
+         questManager.ControlObject();
+     }
 
-    // public void GameExit()
-    // {
-    //     Application.Quit();
-    // }
+     public void GameExit()
+     {
+         Application.Quit();
+     }
 
-    // public void GameReset()
-    // {
-    //     float x = 0;
-    //     float y = 0;
-    //     int questId = 0;
-    //     int questActionIndex = 0;
-    //     player.transform.position = new Vector3(x,y,0);
-    //     questManager.questId = questId;
-    //     questManager.questActionIndex = questActionIndex;
-    //     questManager.ControlObject();
-    // }
+     public void GameReset()
+     {
+         float x = 0;
+         float y = 0;
+         int questId = 0;
+         int questActionIndex = 0;
+         player.transform.position = new Vector3(x,y,0);
+         questManager.questId = questId;
+         questManager.questActionIndex = questActionIndex;
+         questManager.ControlObject();
+        // 여기서 첫화면 씬으로 돌아가기로 바꿀 예정
+
+     }
 
 }
