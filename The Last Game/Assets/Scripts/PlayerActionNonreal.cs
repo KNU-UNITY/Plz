@@ -9,11 +9,15 @@ public class PlayerActionNonreal : MonoBehaviour
     float v;
     bool isHorizonMove;
     Rigidbody2D rigid;
+    SpriteRenderer spriteRenderer;
+    //CapsuleCollider2D collider2D;
+   
 
     // Start is called before the first frame update
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         //anim = GetComponent<Animator>();
     }
 
@@ -21,8 +25,16 @@ public class PlayerActionNonreal : MonoBehaviour
     {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
-    }
 
+        //flip character
+        if (Input.GetButtonDown("Horizontal"))
+            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+        //jump
+        if (Input.GetButtonDown("Jump"))
+        {
+            rigid.AddForce(Vector2.up * 20, ForceMode2D.Impulse);
+        }
+    }
     void FixedUpdate()
     {
         rigid.velocity = new Vector2(h,v)*speed;
