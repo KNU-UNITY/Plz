@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("PlayerX"))
-            return;
         GameLoad();
          questText.text = questManager.CheckQuest();
      }
@@ -56,6 +54,7 @@ public class GameManager : MonoBehaviour
         ObjData objData = scanObject.GetComponent<ObjData>();
         Talk(objData.id,objData.isNpc);
         talkPanel.SetBool("isShow",isAction);
+
     }
 
     public void Talk(int id, bool isNpc)
@@ -115,13 +114,15 @@ public class GameManager : MonoBehaviour
          PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
          PlayerPrefs.Save();
          menuSet.SetActive(false);
+         Time.timeScale = 1;
 
-     }
+
+    }
 
      public void GameLoad()
      {
-        // if (!PlayerPrefs.HasKey("PlayerX"))
-         //   return;
+        if (!PlayerPrefs.HasKey("PlayerX"))
+            return;
 
          float x = PlayerPrefs.GetFloat("PlayerX");
          float y = PlayerPrefs.GetFloat("PlayerY");
@@ -132,7 +133,8 @@ public class GameManager : MonoBehaviour
          questManager.questId = questId;
          questManager.questActionIndex = questActionIndex;
          questManager.ControlObject();
-     }
+         Time.timeScale = 1;
+    }
 
      public void GameExit()
      {
@@ -141,6 +143,7 @@ public class GameManager : MonoBehaviour
 
      public void GameReset()
      {
+        //어느맵으로 이동을 하든 처음 시작하는 스테이지로 이동하게
          float x = 0;
          float y = 0;
          int questId = 0;
@@ -149,8 +152,9 @@ public class GameManager : MonoBehaviour
          questManager.questId = questId;
          questManager.questActionIndex = questActionIndex;
          questManager.ControlObject();
-        // 여기서 첫화면 씬으로 돌아가기로 바꿀 예정
+        Time.timeScale = 1;
+        // 여기서 스타트 화면으로 돌아가기 
 
-     }
+    }
 
 }
