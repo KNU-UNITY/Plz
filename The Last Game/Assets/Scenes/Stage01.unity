@@ -271,7 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df425bd1f9f939845b1853dee290b5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 1468295594}
 --- !u!1 &173033029
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612ad38a28ec02845b2730199938d585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerController: {fileID: 1468295593}
 --- !u!114 &173033032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,16 +448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a49cddd0b347448a6eec7b7e672b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
-  enemyPrefab: {fileID: 4796747783846037301, guid: 32f050609fd45dd4299f9568d1407eb6, type: 3}
-  enemyHPSliderPrefab: {fileID: 2921216230706463152, guid: bba10abeb2e3fc34baa0ecc5c156c3cd, type: 3}
-  canvasTransform: {fileID: 701674209}
-  bgmController: {fileID: 1527795282}
-  textBossWarning: {fileID: 1495626969}
-  panelBossHP: {fileID: 1695607323}
-  boss: {fileID: 1827710601}
-  spawnTime: 0.35
-  maxEnemyCount: 100
 --- !u!4 &191006093
 Transform:
   m_ObjectHideFlags: 0
@@ -847,10 +835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663d6846f8dc9f045b9cd044e42c703e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 901149544}
-  scrollRange: 9.9
-  moveSpeed: 3
-  moveDirection: {x: 0, y: -1, z: 0}
 --- !u!212 &782333477
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -900,7 +884,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &782333478
@@ -1031,10 +1015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663d6846f8dc9f045b9cd044e42c703e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 782333478}
-  scrollRange: 9.9
-  moveSpeed: 3
-  moveDirection: {x: 0, y: -1, z: 0}
 --- !u!212 &901149546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1084,7 +1064,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1013379493
@@ -1352,8 +1332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96108a81a419854c895bce5b5df3245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  moveDirection: {x: 0, y: 0, z: 0}
 --- !u!212 &1468295591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1403,7 +1381,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1468295592
@@ -1433,10 +1411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b6c5349ef5324db6ceb271797aa5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: GameOver
-  stageData: {fileID: 11400000, guid: a44013bc04e47494eb4ed7176dcf64f2, type: 2}
-  KeyCodeAttack: 32
-  keyCodeBoom: 122
 --- !u!114 &1468295594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,10 +1423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccef9703f3ec5242993d163b70833e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
-  attackRate: 0.1
-  maxAttackLevel: 4
-  boomPrefab: {fileID: 8210924418869867313, guid: 97f0e5346abc9204d97de8d247390804, type: 3}
 --- !u!50 &1468295595
 Rigidbody2D:
   serializedVersion: 4
@@ -1502,7 +1472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518b4a2caeae592408378a033f171be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
 --- !u!95 &1468295598
 Animator:
   serializedVersion: 4
@@ -1804,7 +1773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3df1acac3531304e833ba1a80254334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpTime: 0.1
 --- !u!1 &1527795279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,9 +1914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812e4c0a947ee444bb58eb4ef912e0d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmClips:
-  - {fileID: 8300000, guid: df66f964bb884394888353044e859c8c, type: 3}
-  - {fileID: 8300000, guid: f22c7df422ca6854aa49616e6124bc94, type: 3}
 --- !u!1 &1695607323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,7 +2032,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1827710603
@@ -2097,8 +2062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96108a81a419854c895bce5b5df3245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  moveDirection: {x: 0, y: 0, z: 0}
 --- !u!60 &1827710605
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2140,11 +2103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42fdb6e4c6c3c1446af3f5badcb885e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: a44013bc04e47494eb4ed7176dcf64f2, type: 2}
-  bossAppearPoint: 2.5
-  explosionPrefab: {fileID: 2152168264983622745, guid: b32ce102db5034f40b2dfb132dfbe8da, type: 3}
-  playerController: {fileID: 1468295593}
-  nextSceneName: GameClear
 --- !u!114 &1827710607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2157,7 +2115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e98a2ac7e40284a86e42188e27583c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 752824763389187963, guid: 3fc44520d77f6c84992f3caaa5abad08, type: 3}
 --- !u!114 &1827710608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,7 +2127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f423bb2c310375488c6e3200245318f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1000
 --- !u!1 &1852888489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,7 +2230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273b039f7d4bfce41bbe23fe73e2d24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossHP: {fileID: 1827710608}
 --- !u!1 &1908958933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,7 +2319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff149607609f2674baa3e07c4820f5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: {fileID: 1468295597}
 --- !u!114 &2012927991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2536,8 +2490,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a44f558663d89c4ca35216de8073171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
-  alertLinePrefab: {fileID: 8882113136356876340, guid: 8ded3570a7ec9d54cb49860ee62bbdef, type: 3}
-  meteoritePrefab: {fileID: 2484238494524138101, guid: c7357bc776076da4683543d58aa34548, type: 3}
-  minSpawnTime: 1
-  maxSpawnTime: 4
