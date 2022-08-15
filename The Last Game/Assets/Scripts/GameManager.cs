@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
+
     public QuestManager questManager;
     public Image portraitImg;
     public Animator portraitAnim;
@@ -22,10 +25,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI questText;
     public ObjData obj;
 
-    // private void Start()
+    //Shop
+    public int Coin;
+    public int[] itemsCount;
+
+    // void Start()
     // {
-    //     if(!PlayerPrefs.HasKey("PlayerX"))
-    //         return;
     //     GameLoad();
     //     questText.text = questManager.CheckQuest();
     // }
@@ -108,13 +113,13 @@ public class GameManager : MonoBehaviour
     //     PlayerPrefs.SetInt("QustId",questManager.questId);
     //     PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
     //     PlayerPrefs.Save();
-
     //     menuSet.SetActive(false);
-
+    //     Time.timeScale = 1;
     // }
 
     // public void GameLoad()
     // {
+    //     if(!PlayerPrefs.HasKey("PlayerX")) return;
     //     float x = PlayerPrefs.GetFloat("PlayerX");
     //     float y = PlayerPrefs.GetFloat("PlayerY");
     //     int questId = PlayerPrefs.GetInt("QustId");
@@ -141,6 +146,6 @@ public class GameManager : MonoBehaviour
     //     questManager.questId = questId;
     //     questManager.questActionIndex = questActionIndex;
     //     questManager.ControlObject();
+    //     Time.timeScale = 1;
     // }
-
 }
