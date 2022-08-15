@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour
      {
          PlayerPrefs.SetFloat("PlayerX",player.transform.position.x);
          PlayerPrefs.SetFloat("PlayerY",player.transform.position.y);
+         PlayerPrefs.SetInt("Coin", Coin);
          PlayerPrefs.SetInt("QustId",questManager.questId);
          PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
          PlayerPrefs.Save();
@@ -122,9 +123,10 @@ public class GameManager : MonoBehaviour
          if(!PlayerPrefs.HasKey("PlayerX")) return;
          float x = PlayerPrefs.GetFloat("PlayerX");
          float y = PlayerPrefs.GetFloat("PlayerY");
+         int coin = PlayerPrefs.GetInt("Coin");
          int questId = PlayerPrefs.GetInt("QustId");
          int questActionIndex = PlayerPrefs.GetInt("QustActionIndex");
-
+         Coin = coin;
          player.transform.position = new Vector3(x,y,0);
          questManager.questId = questId;
          questManager.questActionIndex = questActionIndex;
@@ -141,6 +143,7 @@ public class GameManager : MonoBehaviour
          float x = 0;
          float y = 0;
          int questId = 0;
+         int coin = 0;
          int questActionIndex = 0;
          player.transform.position = new Vector3(x,y,0);
          questManager.questId = questId;
