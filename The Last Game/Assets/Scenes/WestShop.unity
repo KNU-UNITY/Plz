@@ -482,6 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 306972797}
   - component: {fileID: 306972796}
+  - component: {fileID: 306972798}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -501,8 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f84c08594d4ba54bb3a628104a2173a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coin: 9999
-  itemsCount: 00000000000000000000000000000000
 --- !u!4 &306972797
 Transform:
   m_ObjectHideFlags: 0
@@ -518,6 +517,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306972798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306972795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47626f41d8e941dab5a9ff4e075d6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questManager: {fileID: 0}
+  portraitImg: {fileID: 0}
+  portraitAnim: {fileID: 0}
+  prevPortrait: {fileID: 0}
+  talkManager: {fileID: 0}
+  talkPanel: {fileID: 0}
+  talk: {fileID: 0}
+  scanObject: {fileID: 0}
+  menuSet: {fileID: 0}
+  player: {fileID: 0}
+  isAction: 0
+  talkIndex: 0
+  charNameText: {fileID: 0}
+  questText: {fileID: 0}
+  obj: {fileID: 0}
+  Coin: 9999
+  itemsCount: 00000000000000000000000000000000
 --- !u!1 &310160565
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,7 +3683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d1fd0a5437b104a9222f2a5923b217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 306972796}
+  gameManager: {fileID: 306972798}
   Pages:
   - {fileID: 759333302}
   - {fileID: 452827303}
