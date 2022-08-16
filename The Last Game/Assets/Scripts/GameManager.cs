@@ -8,22 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
     public QuestManager questManager;
-    public Image portraitImg;
-    public Animator portraitAnim;
-    public Sprite prevPortrait;
-    public TalkManager talkManager;
-    public Animator talkPanel;
-    public TypeEffect talk;
     public GameObject scanObject;
-    public GameObject menuSet;
-    public GameObject player;
-    public bool isAction;
-    public int talkIndex;
-    public TextMeshProUGUI charNameText;
-    public TextMeshProUGUI questText;
-    public ObjData obj;
 
     //Shop
     public int Coin;
@@ -35,74 +21,15 @@ public class GameManager : MonoBehaviour
     //     questText.text = questManager.CheckQuest();
     // }
 
-    void Update()
-    {
-        //Submenu
-        if(Input.GetButtonDown("Cancel"))
-        {
-            if(menuSet.activeSelf)
-            menuSet.SetActive(false);
-            else
-            menuSet.SetActive(true);
-        }
-    }
 
     // Update is called once per frame
-    public void Action(GameObject scanObj)
+    public void PortalMove(GameObject scanObj)
     {
-        isAction = true;
         scanObject = scanObj;
-        ObjData objData = scanObject.GetComponent<ObjData>();
-        Talk(objData.id,objData.isNpc);
-        talkPanel.SetBool("isShow",isAction);
-    }
 
-    public void Talk(int id, bool isNpc)
-    {
-        int questTalkIndex=0;
-        string talkData ="";
-         //Set Talk Data
-        if(talk.isAnimation){
-            talk.SetMsg("");
-            return;
-        }
-        else{
-            questTalkIndex = questManager.GetQuestTalkIndex(id);
-            talkData  = talkManager.GetTalk(id+questTalkIndex,talkIndex);
-        }
-
-        //End Talk
-        if(talkData == null){
-            isAction = false;
-            talkIndex  =0;
-            questText.text = questManager.CheckQuest(id);
-            return;
-        }
-
-        if(isNpc){
-            //Char Name Text
-            if(id==1000)
-                charNameText.text = "루도";
-            else if(id==2000)
-                charNameText.text = "루나";
-            talk.SetMsg(talkData.Split(':')[0]);
-
-            //Show Portrait
-            portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
-            portraitImg.color = new Color(1,1,1,1);
-            //Animation Potrait
-            if(prevPortrait != portraitImg.sprite){
-                portraitAnim.SetTrigger("doEffect");
-                prevPortrait = portraitImg.sprite;
-            }
-        }
-        else{
-            charNameText.text = "";
-            talk.SetMsg(talkData);
-            portraitImg.color = new Color(1,1,1,0);
-        }
-        isAction = true;
-        talkIndex++;
+        if(scanObject.name == "Dong Portal")
+            Debug.Log("동포탈이다");
+        
     }
 
 

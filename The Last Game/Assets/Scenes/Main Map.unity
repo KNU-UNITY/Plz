@@ -3287,7 +3287,7 @@ GameObject:
   - component: {fileID: 730574806}
   - component: {fileID: 730574810}
   - component: {fileID: 730574811}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dong Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4015,7 +4015,7 @@ GameObject:
   - component: {fileID: 782286435}
   - component: {fileID: 782286438}
   - component: {fileID: 782286439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Buk Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4876,7 +4876,7 @@ GameObject:
   - component: {fileID: 1232713670}
   - component: {fileID: 1232713673}
   - component: {fileID: 1232713674}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Seo Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6825,6 +6825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864eb549388cd49c48e5ec4d51f5f597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   speed: 5
 --- !u!50 &1628492791
 Rigidbody2D:
@@ -6886,7 +6887,7 @@ GameObject:
   - component: {fileID: 2080647675}
   - component: {fileID: 2080647678}
   - component: {fileID: 2080647679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jeong Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
