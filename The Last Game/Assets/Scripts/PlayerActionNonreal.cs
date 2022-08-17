@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerActionNonreal : MonoBehaviour
 {
@@ -52,8 +53,8 @@ public class PlayerActionNonreal : MonoBehaviour
             dirVec = Vector3.right;
 
         //Scan Object
-        if(Input.GetButtonDown("Jump") && scanObject != null)
-            manager.PortalMove(scanObject);
+        if(Input.GetButtonDown("Jump")&& scanObject != null)
+            PortalMove(scanObject);
 
 
         //flip character
@@ -73,12 +74,37 @@ public class PlayerActionNonreal : MonoBehaviour
 
         //Ray
         Debug.DrawRay(rigid.position,dirVec*0.9f,new Color(0,1,0));
-        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position,dirVec,0.9f,LayerMask.GetMask("Object"));
+        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position,dirVec,0.9f,LayerMask.GetMask("Object","Shop"));
 
         if(rayHit.collider != null ){
             scanObject = rayHit.collider.gameObject;
         }
         else
             scanObject = null;
+    }
+
+    public void PortalMove(GameObject scanObj)
+    {
+        scanObject = scanObj;
+
+        if(scanObject.name == "Dong Portal")
+            SceneManager.LoadScene("Dong Mun");
+        else if(scanObject.name == "Seo Portal")
+            SceneManager.LoadScene("Seo Mun");
+        else if(scanObject.name == "Jeong Portal")
+            SceneManager.LoadScene("Jeong Mun");
+        else if(scanObject.name == "Buk Portal")
+            SceneManager.LoadScene("Buk Mun");
+
+        else if(scanObject.name == "Bukmun Shop")
+            SceneManager.LoadScene("NorthShop");
+        else if(scanObject.name == "Seomun Shop")
+            SceneManager.LoadScene("WestShop");
+        else if(scanObject.name == "Dong Shop")
+            SceneManager.LoadScene("EastShop");
+        else if(scanObject.name == "Jeongmun Shop")
+            SceneManager.LoadScene("MainShop");
+            
+        
     }
 }

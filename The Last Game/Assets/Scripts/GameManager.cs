@@ -22,16 +22,7 @@ public class GameManager : MonoBehaviour
     // }
 
 
-    // Update is called once per frame
-    public void PortalMove(GameObject scanObj)
-    {
-        scanObject = scanObj;
-
-        if(scanObject.name == "Dong Portal")
-            Debug.Log("동포탈이다");
-        
-    }
-
+    
 
     // public void GameSave()
     // {
