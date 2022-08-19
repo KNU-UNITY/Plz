@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:The Last Game/Assets/Scenes/Stage03.unity.meta
 guid: afd9e70e118ce1d4aa2d238c94139864
+========
+guid: cab9c88ff6ff14f22899a148f929d143
+>>>>>>>> main:The Last Game/Assets/Scenes/Buk Stage Decision.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -167,7 +167,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 0e8927e5aab983b4fa4822eb7d80512b
-      internalID: -274245538
+      internalID: -2322180950842035098
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b1272b694717fb843a7e2fbf703d9cb4
-      internalID: -1027170789
+      internalID: -4893972260818282012
       vertices: []
       indices: 
       edges: []
@@ -209,7 +209,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ea9bb0fbf494c0243a15a079978a36a1
-      internalID: -1301817897
+      internalID: -6323751108524238166
       vertices: []
       indices: 
       edges: []
@@ -230,7 +230,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 59b94296af608ee40b50949a298d8e4d
-      internalID: -2064402879
+      internalID: 2722280177590742205
       vertices: []
       indices: 
       edges: []
@@ -251,7 +251,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: afcc51d5d39fbbe4ebf368afc244eede
-      internalID: -999071243
+      internalID: 6582046967323461550
       vertices: []
       indices: 
       edges: []
@@ -272,7 +272,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3644683ebed001d41a2b8ad7193c745f
-      internalID: -200924120
+      internalID: 1942777921290549423
       vertices: []
       indices: 
       edges: []
@@ -293,7 +293,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 96983390aeec238439820dc6abe07870
-      internalID: -1253398246
+      internalID: 8793606821965667882
       vertices: []
       indices: 
       edges: []
@@ -314,7 +314,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ebeb20aa3ab6b6d458855516483a1b2d
-      internalID: -326477584
+      internalID: 3444832735345940322
       vertices: []
       indices: 
       edges: []
@@ -323,82 +323,19 @@ TextureImporter:
       name: Coins_8
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 8
-        height: 8
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
       spriteID: d2c1ac7f22b621f4ea5a1ada3e7f9ef6
-      internalID: 275135918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coins_9
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 4
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b898ffe1983bdfc44a52378015f4b40f
-      internalID: -1287315277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coins_10
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 4
-        width: 4
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49371549af801c84bb9ec3ebc4b7000f
-      internalID: -439879691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coins_11
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 4
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 980cad2f44c654b4690a05130a49c339
-      internalID: -991618993
+      internalID: -4986890610287934012
       vertices: []
       indices: 
       edges: []
@@ -406,7 +343,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7e6a3458aea67d6468fc14ee8c46abba
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -414,18 +351,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Coins_9: -1287315277
-      Coins_10: -439879691
-      Coins_3: -2064402879
-      Coins_2: -1301817897
-      Coins_4: -999071243
-      Coins_5: -200924120
-      Coins_8: 275135918
-      Coins_11: -991618993
-      Coins_7: -326477584
-      Coins_1: -1027170789
-      Coins_0: -274245538
-      Coins_6: -1253398246
+      Coins_3: 2722280177590742205
+      Coins_2: -6323751108524238166
+      Coins_4: 6582046967323461550
+      Coins_5: 1942777921290549423
+      Coins_8: -4986890610287934012
+      Coins_7: 3444832735345940322
+      Coins_1: -4893972260818282012
+      Coins_0: -2322180950842035098
+      Coins_6: 8793606821965667882
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
