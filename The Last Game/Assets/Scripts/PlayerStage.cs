@@ -6,12 +6,14 @@ public class PlayerStage : MonoBehaviour
 {
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
+    Animator anim;
     int maxSpeed = 5;
     int jumpPower = 12;
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
@@ -42,5 +44,12 @@ public class PlayerStage : MonoBehaviour
         {
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
+
+        //walk
+        if (Mathf.Abs(rigid.velocity.x) > 0.3)  //속도가 0.3 이하이라면
+
+            anim.SetBool("isWalking", true);
+        else
+            anim.SetBool("isWalking", false);
     }
 }
