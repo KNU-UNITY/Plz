@@ -4188,7 +4188,7 @@ GameObject:
   - component: {fileID: 799369039}
   m_Layer: 7
   m_Name: Jeong Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4437,6 +4437,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26, y: 26}
   m_EdgeRadius: 0
+--- !u!1 &854804991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854804993}
+  - component: {fileID: 854804992}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &854804992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854804991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47626f41d8e941dab5a9ff4e075d6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanObject: {fileID: 0}
+  player: {fileID: 1628492787}
+  menuSet: {fileID: 0}
+  Coin: 0
+  itemsCount: 
+--- !u!4 &854804993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854804991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.0187106, y: 1.3704407, z: 0.0777893}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905395523
 GameObject:
   m_ObjectHideFlags: 0
@@ -4451,7 +4500,7 @@ GameObject:
   - component: {fileID: 905395528}
   m_Layer: 7
   m_Name: Seo Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4704,7 +4753,7 @@ GameObject:
   - component: {fileID: 1196107850}
   m_Layer: 7
   m_Name: Dong Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5144,7 +5193,7 @@ GameObject:
   - component: {fileID: 1504091825}
   m_Layer: 7
   m_Name: Buk Portal
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6894,7 +6943,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 62135f9106bb1479192c5d94e879bc03, type: 3}
+  m_Sprite: {fileID: 922643813, guid: 5c4126f51a6086c4ea2a3b8f0f8e3391, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6914,7 +6963,7 @@ Transform:
   m_GameObject: {fileID: 1628492787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.309, y: -2.709, z: 0}
-  m_LocalScale: {x: 0.324, y: 0.324, z: 0.324}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 207477162}
@@ -6958,8 +7007,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 8}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.3125, y: 1.8125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6980,7 +7029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864eb549388cd49c48e5ec4d51f5f597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 854804992}
   speed: 5
 --- !u!1 &2080647672
 GameObject:

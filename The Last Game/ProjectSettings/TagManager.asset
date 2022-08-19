@@ -8,6 +8,8 @@ TagManager:
   - Platform
   - Item
   - Shop
+  - Portal
+  - 2nd Portal
   layers:
   - Default
   - TransparentFX

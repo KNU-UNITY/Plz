@@ -86,8 +86,8 @@ public class PlayerActionNonreal : MonoBehaviour
     public void PortalMove(GameObject scanObj)
     {
         scanObject = scanObj;
-
-        if(scanObject.name == "Dong Portal")
+        if(scanObject.CompareTag("Portal")==true){
+            if(scanObject.name == "Dong Portal")
             SceneManager.LoadScene("Dong Mun");
         else if(scanObject.name == "Seo Portal")
             SceneManager.LoadScene("Seo Mun");
@@ -95,8 +95,10 @@ public class PlayerActionNonreal : MonoBehaviour
             SceneManager.LoadScene("Jeong Mun");
         else if(scanObject.name == "Buk Portal")
             SceneManager.LoadScene("Buk Mun");
+        }
 
-        else if(scanObject.name == "Bukmun Shop")
+    else if(scanObject.CompareTag("Shop")==true){
+        if(scanObject.name == "Bukmun Shop")
             SceneManager.LoadScene("NorthShop");
         else if(scanObject.name == "Seomun Shop")
             SceneManager.LoadScene("WestShop");
@@ -104,6 +106,20 @@ public class PlayerActionNonreal : MonoBehaviour
             SceneManager.LoadScene("EastShop");
         else if(scanObject.name == "Jeongmun Shop")
             SceneManager.LoadScene("MainShop");
+    }
+
+    else if(scanObject.CompareTag("2nd Portal")==true){
+        if(scanObject.name == "Buk 2nd Portal")
+            SceneManager.LoadScene("Buk Stage Decision");
+        else if(scanObject.name == "Seo 2nd Portal")
+            SceneManager.LoadScene("Seo Stage Decision");
+        else if(scanObject.name == "Dong 2nd Portal")
+            SceneManager.LoadScene("Dong Stage Decision");
+        else if(scanObject.name == "Jeong 2nd Portal")
+            SceneManager.LoadScene("Jeong Stage Decision");
+    }
+
+    
             
         
     }
