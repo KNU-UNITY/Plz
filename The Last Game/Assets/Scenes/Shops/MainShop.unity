@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11423421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1667660044}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: ExitMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &11423421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4068,21 +4080,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47626f41d8e941dab5a9ff4e075d6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questManager: {fileID: 0}
-  portraitImg: {fileID: 0}
-  portraitAnim: {fileID: 0}
-  prevPortrait: {fileID: 0}
-  talkManager: {fileID: 0}
-  talkPanel: {fileID: 0}
-  talk: {fileID: 0}
   scanObject: {fileID: 0}
-  menuSet: {fileID: 0}
   player: {fileID: 0}
-  isAction: 0
-  talkIndex: 0
-  charNameText: {fileID: 0}
-  questText: {fileID: 0}
-  obj: {fileID: 0}
+  menuSet: {fileID: 0}
   Coin: 0
   itemsCount: 
 --- !u!1 &1384435881

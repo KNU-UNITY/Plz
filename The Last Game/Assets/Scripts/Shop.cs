@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Shop : MonoBehaviour
 {
@@ -42,5 +42,25 @@ public class Shop : MonoBehaviour
             gameManager.itemsCount[index]++;
         }
         //Debug.Log(price);
+    }
+
+    //Exit
+    public void ExitMain()
+    {
+        SceneManager.LoadScene("Jeong Mun");
+    }
+
+    public void ExitEast()
+    {
+        SceneManager.LoadScene("Dong Mun");
+    }
+
+    public void ExitWest()
+    {
+        SceneManager.LoadScene("Seo Mun");
+    }
+    public void ExitNorth()
+    {
+        SceneManager.LoadScene("Buk Mun");
     }
 }
