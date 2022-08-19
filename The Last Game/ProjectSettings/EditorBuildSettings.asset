@@ -5,7 +5,46 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Main Map.unity
+    guid: f4e7900cb9da24c80a92c70da74f69a5
+  - enabled: 1
+    path: Assets/Scenes/Dong Mun.unity
+    guid: 4ddebacb3969c45b6a2dbe09621512f5
+  - enabled: 1
+    path: Assets/Scenes/Seo Mun.unity
+    guid: c364de9f67a3c4e44becbad9bfb3d0cc
+  - enabled: 1
+    path: Assets/Scenes/Jeong Mun.unity
+    guid: 62d442cde3b1641839a0b728451066ee
+  - enabled: 1
+    path: Assets/Scenes/Buk Mun.unity
+    guid: ef40d3bae2a8846f4ba78de9b0c76d44
+  - enabled: 1
+    path: Assets/Scenes/Shops/EastShop.unity
+    guid: b788d39b78d996c48b9273fcd7457ae3
+  - enabled: 1
+    path: Assets/Scenes/Shops/WestShop.unity
+    guid: 77b677203e1630546a790b06e83a7b76
+  - enabled: 1
+    path: Assets/Scenes/Shops/MainShop.unity
+    guid: e6375519a0adf38459cd0e493c0980a9
+  - enabled: 1
+    path: Assets/Scenes/Shops/NorthShop.unity
+    guid: c8cb301168bed544ab68136186f13c60
+  - enabled: 1
+    path: Assets/Scenes/Dong Stage Decision.unity
+    guid: c15b6a4cd995c42d3a5dc981ed8244e6
+  - enabled: 1
+    path: Assets/Scenes/Seo Stage Decision.unity
+    guid: 1036107db67634787ba42e34919c2de8
+  - enabled: 1
+    path: Assets/Scenes/Jeong Stage Decision.unity
+    guid: 19d00581419294e8bb7d60156c831a9d
+  - enabled: 1
+    path: Assets/Scenes/Buk Stage Decision.unity
+    guid: cab9c88ff6ff14f22899a148f929d143
   m_configObjects: {}
