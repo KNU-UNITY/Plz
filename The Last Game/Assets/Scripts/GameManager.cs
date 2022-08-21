@@ -13,21 +13,29 @@ public class GameManager : MonoBehaviour
     public GameObject scanObject;
     public GameObject player;
     public GameObject menuSet;
-
+    
     //Shop
     public int Coin;
     public int[] itemsCount;
-
+    public int[] ItemPrice;
+    //UI
+    public TextMeshProUGUI coin;
+    public TextMeshProUGUI[] count;
      void Start()
      {
          GameLoad();
          //questText.text = questManager.CheckQuest();
      }
 
-
-    
-
-     public void GameSave()
+    public void Update()
+    {
+        coin.text = Coin.ToString();
+        count[0].text = "X " + itemsCount[0].ToString();
+        count[1].text = "X " + itemsCount[1].ToString();
+        count[2].text = "X " + itemsCount[2].ToString();
+        count[3].text = "X " + itemsCount[3].ToString();
+    }
+    public void GameSave()
      {
          PlayerPrefs.SetFloat("PlayerX",player.transform.position.x);
          PlayerPrefs.SetFloat("PlayerY",player.transform.position.y);
@@ -72,4 +80,17 @@ public class GameManager : MonoBehaviour
         //  questManager.ControlObject();
          Time.timeScale = 1;
      }
+
+    public void Buy(int index)
+    {
+        int price = ItemPrice[index];
+        if (Coin >= price)  //가진 돈이 충분할 경우
+        {
+            Coin -= price;
+            itemsCount[index]++;
+            coin.text = Coin.ToString();
+            count[index].text = "X " + itemsCount[index].ToString();
+        }
+        
+    }
 }
