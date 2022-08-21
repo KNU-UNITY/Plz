@@ -808,8 +808,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192991637}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -1626,8 +1626,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192991637}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -1965,8 +1965,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192991637}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -3183,7 +3183,6 @@ MonoBehaviour:
   - {fileID: 1061866240}
   - {fileID: 184583068}
   pageIndex: 0
-  ItemPrice: 64000000640000006400000064000000
 --- !u!1 &1238912513
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,7 +3918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 37243094, guid: b3a3f7b3bb359444f86e1323a13e3ff5, type: 3}
+  m_Sprite: {fileID: 1596307009, guid: b3a3f7b3bb359444f86e1323a13e3ff5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5768,8 +5767,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192991637}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
