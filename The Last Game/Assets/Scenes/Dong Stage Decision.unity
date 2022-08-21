@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 641195442}
   - component: {fileID: 641195441}
   - component: {fileID: 641195443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1252,7 +1252,7 @@ GameObject:
   - component: {fileID: 960315842}
   - component: {fileID: 960315841}
   - component: {fileID: 960315843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap NonBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2326,7 @@ Animator:
   m_GameObject: {fileID: 1509047613}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be9a4e77e0e854643993d10211ad6806, type: 2}
+  m_Controller: {fileID: 9100000, guid: f24aaea3e6e46c44b864f5cf24aaefd9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
