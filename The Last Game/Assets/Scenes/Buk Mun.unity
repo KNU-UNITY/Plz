@@ -784,6 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47626f41d8e941dab5a9ff4e075d6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cnt: 0
   scanObject: {fileID: 0}
   player: {fileID: 1702711934}
   menuSet: {fileID: 1247400268}

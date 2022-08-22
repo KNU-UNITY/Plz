@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 72
+  controlID: 65
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 129
+  controlID: 19
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 130
+  controlID: 20
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 120
+  controlID: 21
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -710,9 +710,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 887b0100
-      m_LastClickedID: 97160
-      m_ExpandedIDs: 725fffffd06effffc26fffff1e74ffffbe74ffff7e77fffffe81ffff7884ffffec84ffff7e85ffff4a87ffff9287ffffb68bffff8891ffffc694ffffa699ffffee99ffff94a0ffff9ea1ffffc4a2ffff38a3ffff74a5ffffaaa6ffff08a8fffff4a8ffff3ca9ffffd4a9ffff8eabffff9eafffffeaafffff32b0ffffdebaffffc0c1ffff16c5ffff16c6ffff60c6ffff3ec9ffff52cbffffa2ceffff36cfffffcad1ffff12d2ffff5ad2ffffd2d2ffffccd3ffff26daffff06dcffff72e1ffffbae1fffffee1ffff56e2ffff76ecffffd4ecffffe6f0fffff0f0fffff6f0fffff8f0ffff4ef1ffff28f4ffff2afbfffff4ffffffd48e00001893000022930000389300009093000098930000309b0000389b00009c9b0000069c000052a1000068a10000b6a10000c0a10000c8a100002ca800009aa80000a2a800002aaa000066aa000098aa0000a0aa000070ad000062b10000de16010026420100e47b0100
+      m_SelectedIDs: 3e170200
+      m_LastClickedID: 137022
+      m_ExpandedIDs: a8b8fffff2b8ffffecc6ffff4cc7ffff8cc7ffff6cc8ffffccc8ffff4cdbffffd8e1ffffecf0ffff5af1ffff02f2ffff5ef3ffff9af3ffff2afbfffff4ffffff84900000ba91000000930000d09300000ea80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -869,36 +869,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 50
   m_LastProjectPath: C:\Users\dntmd\Documents\GitHub\Plz\The Last Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 153.49963}
-    m_SelectedIDs: 9e610000
-    m_LastClickedID: 24990
-    m_ExpandedIDs: 000000005e610000606100006261000064610000666100006861000000ca9a3b
+    scrollPos: {x: 0, y: 173.49945}
+    m_SelectedIDs: 6a610000
+    m_LastClickedID: 24938
+    m_ExpandedIDs: 0000000060610000626100006461000066610000686100006a61000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Shops
-      m_OriginalName: Shops
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 24988
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 3}
     m_SearchString: 
@@ -912,7 +912,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005e6100006061000062610000646100006661000068610000
+    m_ExpandedIDs: 0000000060610000626100006461000066610000686100006a610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
