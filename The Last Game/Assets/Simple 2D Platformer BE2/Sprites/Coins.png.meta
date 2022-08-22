@@ -323,16 +323,16 @@ TextureImporter:
       name: Coins_8
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 8
-        height: 8
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
       spriteID: d2c1ac7f22b621f4ea5a1ada3e7f9ef6
       internalID: 275135918
@@ -340,6 +340,7 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+<<<<<<< HEAD
     - serializedVersion: 2
       name: Coins_9
       rect:
@@ -403,10 +404,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+>>>>>>> main
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7e6a3458aea67d6468fc14ee8c46abba
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -414,6 +417,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       Coins_9: -1287315277
       Coins_10: -439879691
       Coins_3: -2064402879
@@ -426,6 +430,17 @@ TextureImporter:
       Coins_1: -1027170789
       Coins_0: -274245538
       Coins_6: -1253398246
+=======
+      Bronze 1: -4893972260818282012
+      Silver 1: 1942777921290549423
+      Silver 2: 8793606821965667882
+      Bronze 0: -2322180950842035098
+      Bronze 3: 2722280177590742205
+      Gold 0: -4986890610287934012
+      Bronze 2: -6323751108524238166
+      Silver 0: 6582046967323461550
+      Silver 3: 3444832735345940322
+>>>>>>> main
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
