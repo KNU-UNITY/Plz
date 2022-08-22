@@ -102,7 +102,7 @@ public class PlayerActionNonreal : MonoBehaviour
             SceneManager.LoadScene("NorthShop");
         else if(scanObject.name == "Seomun Shop")
             SceneManager.LoadScene("WestShop");
-        else if(scanObject.name == "Dong Shop")
+        else if(scanObject.name == "Dongmun Shop")
             SceneManager.LoadScene("EastShop");
         else if(scanObject.name == "Jeongmun Shop")
             SceneManager.LoadScene("MainShop");
