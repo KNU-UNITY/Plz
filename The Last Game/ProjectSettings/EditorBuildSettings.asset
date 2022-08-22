@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/Main Map.unity
     guid: f4e7900cb9da24c80a92c70da74f69a5
+=======
+>>>>>>> origin/KDW_PAST_2
   - enabled: 1
     path: Assets/Scenes/Dong Mun.unity
     guid: 4ddebacb3969c45b6a2dbe09621512f5
@@ -21,6 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Jeong Mun.unity
     guid: 62d442cde3b1641839a0b728451066ee
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Buk Mun.unity
     guid: ef40d3bae2a8846f4ba78de9b0c76d44
   - enabled: 1
@@ -47,4 +51,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Buk Stage Decision.unity
     guid: cab9c88ff6ff14f22899a148f929d143
+=======
+    path: Assets/Scenes/Stage03.unity
+    guid: afd9e70e118ce1d4aa2d238c94139864
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 9db14dfd96995464a9e803b368ef024d
+  - enabled: 1
+    path: Assets/Scenes/ReadyStage.unity
+    guid: f1f8b1e6d515efa4483fcb8b65aabe14
+  - enabled: 1
+    path: Assets/Scenes/Stage02.unity
+    guid: 3819b9e292d00124f936c0455d585f32
+>>>>>>> origin/KDW_PAST_2
   m_configObjects: {}

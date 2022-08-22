@@ -5,11 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< HEAD
   - Platform
   - Item
   - Shop
   - Portal
   - 2nd Portal
+=======
+  - Meteorite
+  - EnemyProjectile
+  - Boss
+  - Music
+  - Shield
+>>>>>>> origin/KDW_PAST_2
   layers:
   - Default
   - TransparentFX

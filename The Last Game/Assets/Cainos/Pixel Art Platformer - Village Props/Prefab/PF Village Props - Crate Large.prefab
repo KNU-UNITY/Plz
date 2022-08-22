@@ -80,7 +80,11 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
+<<<<<<< HEAD:The Last Game/Assets/Cainos/Pixel Art Platformer - Village Props/Prefab/PF Village Props - Crate Large.prefab
   m_Size: {x: 1.40625, y: 1.40625}
+=======
+  m_Size: {x: 0.64, y: 0.62}
+>>>>>>> origin/KDW_PAST_2:The Last Game/Assets/Prefabs/Item03Heart.prefab
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -110,6 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< HEAD:The Last Game/Assets/Cainos/Pixel Art Platformer - Village Props/Prefab/PF Village Props - Crate Large.prefab
   m_Size: {x: 1.3456306, y: 1.3418424}
   m_EdgeRadius: 0
 --- !u!50 &2400146368764488574
@@ -133,3 +138,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+=======
+  m_Radius: 0.4
+>>>>>>> origin/KDW_PAST_2:The Last Game/Assets/Prefabs/Item03Heart.prefab

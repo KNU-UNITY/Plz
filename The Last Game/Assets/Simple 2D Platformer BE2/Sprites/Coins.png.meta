@@ -152,175 +152,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bronze 0
+      name: Coins_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 34
-        width: 16
-        height: 16
+        x: 4
+        y: 38
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 664b1e88ab4f5cfd0800000000000000
-      internalID: -2322180950842035098
+      spriteID: 0e8927e5aab983b4fa4822eb7d80512b
+      internalID: -274245538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bronze 1
+      name: Coins_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 34
-        width: 16
-        height: 16
+        x: 22
+        y: 38
+        width: 6
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e99f4d782e151cb0800000000000000
-      internalID: -4893972260818282012
+      spriteID: b1272b694717fb843a7e2fbf703d9cb4
+      internalID: -1027170789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bronze 2
+      name: Coins_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 34
-        width: 16
-        height: 16
+        x: 40
+        y: 38
+        width: 4
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaa1e681fd58d38a0800000000000000
-      internalID: -6323751108524238166
+      spriteID: ea9bb0fbf494c0243a15a079978a36a1
+      internalID: -1301817897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bronze 3
+      name: Coins_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 34
-        width: 16
-        height: 16
+        x: 56
+        y: 38
+        width: 6
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbc2264f56b77c520800000000000000
-      internalID: 2722280177590742205
+      spriteID: 59b94296af608ee40b50949a298d8e4d
+      internalID: -2064402879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silver 0
+      name: Coins_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 17
-        width: 16
-        height: 16
+        x: 4
+        y: 21
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea78046f7d0285b50800000000000000
-      internalID: 6582046967323461550
+      spriteID: afcc51d5d39fbbe4ebf368afc244eede
+      internalID: -999071243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silver 1
+      name: Coins_5
       rect:
         serializedVersion: 2
-        x: 17
-        y: 17
-        width: 16
-        height: 16
+        x: 22
+        y: 21
+        width: 6
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa8bef3e93226fa10800000000000000
-      internalID: 1942777921290549423
+      spriteID: 3644683ebed001d41a2b8ad7193c745f
+      internalID: -200924120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silver 2
+      name: Coins_6
       rect:
         serializedVersion: 2
-        x: 34
-        y: 17
-        width: 16
-        height: 16
+        x: 40
+        y: 21
+        width: 4
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2e17b560da290a70800000000000000
-      internalID: 8793606821965667882
+      spriteID: 96983390aeec238439820dc6abe07870
+      internalID: -1253398246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silver 3
+      name: Coins_7
       rect:
         serializedVersion: 2
-        x: 51
-        y: 17
-        width: 16
-        height: 16
+        x: 56
+        y: 21
+        width: 6
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2679eec0f118ecf20800000000000000
-      internalID: 3444832735345940322
+      spriteID: ebeb20aa3ab6b6d458855516483a1b2d
+      internalID: -326477584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gold 0
+      name: Coins_8
       rect:
         serializedVersion: 2
         x: 0
@@ -334,12 +334,78 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c58e0069610bcab0800000000000000
-      internalID: -4986890610287934012
+      spriteID: d2c1ac7f22b621f4ea5a1ada3e7f9ef6
+      internalID: 275135918
       vertices: []
       indices: 
       edges: []
       weights: []
+<<<<<<< HEAD
+=======
+    - serializedVersion: 2
+      name: Coins_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 4
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b898ffe1983bdfc44a52378015f4b40f
+      internalID: -1287315277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coins_10
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 4
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49371549af801c84bb9ec3ebc4b7000f
+      internalID: -439879691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coins_11
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 4
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980cad2f44c654b4690a05130a49c339
+      internalID: -991618993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> origin/KDW_PAST_2
     outline: []
     physicsShape: []
     bones: []
@@ -351,6 +417,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       Bronze 1: -4893972260818282012
       Silver 1: 1942777921290549423
       Silver 2: 8793606821965667882
@@ -360,6 +427,20 @@ TextureImporter:
       Bronze 2: -6323751108524238166
       Silver 0: 6582046967323461550
       Silver 3: 3444832735345940322
+=======
+      Coins_9: -1287315277
+      Coins_10: -439879691
+      Coins_3: -2064402879
+      Coins_2: -1301817897
+      Coins_4: -999071243
+      Coins_5: -200924120
+      Coins_8: 275135918
+      Coins_11: -991618993
+      Coins_7: -326477584
+      Coins_1: -1027170789
+      Coins_0: -274245538
+      Coins_6: -1253398246
+>>>>>>> origin/KDW_PAST_2
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
