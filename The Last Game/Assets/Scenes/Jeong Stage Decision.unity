@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 641195442}
   - component: {fileID: 641195441}
   - component: {fileID: 641195443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1917,6 +1917,7 @@ GameObject:
   - component: {fileID: 1571405173}
   - component: {fileID: 1571405175}
   - component: {fileID: 1571405174}
+  - component: {fileID: 1571405176}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2055,6 +2056,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.90625}
   m_Size: {x: 1.3125, y: 1.8125}
   m_Direction: 0
+--- !u!95 &1571405176
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571405166}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f24aaea3e6e46c44b864f5cf24aaefd9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1657290320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}

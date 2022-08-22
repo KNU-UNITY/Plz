@@ -5,11 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Meteorite
-  - EnemyProjectile
-  - Boss
-  - Music
-  - Shield
+  - Platform
+  - Item
+  - Shop
+  - Portal
+  - 2nd Portal
   layers:
   - Default
   - TransparentFX
@@ -17,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Shop
+  - Object
+  - Platform
   - 
   - 
   - 
@@ -46,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Shop
+    uniqueID: 2782385477
+    locked: 0
+  - name: UI
+    uniqueID: 579723275
     locked: 0

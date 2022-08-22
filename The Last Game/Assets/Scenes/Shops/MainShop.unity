@@ -401,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 93106595}
   m_Layer: 5
-  m_Name: Item (1)
+  m_Name: Powerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -574,7 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176027787}
   m_Layer: 5
-  m_Name: Item (2)
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d74304e6a13990b449001070e2da8429, type: 3}
+  m_Sprite: {fileID: 37243094, guid: b3a3f7b3bb359444f86e1323a13e3ff5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2395,8 +2395,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1667660044}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1351806819}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -2533,8 +2533,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1667660044}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1351806819}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -3072,7 +3072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021234386}
   m_Layer: 5
-  m_Name: Item (3)
+  m_Name: Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4051,8 +4051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f84c08594d4ba54bb3a628104a2173a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coin: 9999
-  itemsCount: 00000000000000000000000000000000
 --- !u!4 &1351806818
 Transform:
   m_ObjectHideFlags: 0
@@ -4083,8 +4081,15 @@ MonoBehaviour:
   scanObject: {fileID: 0}
   player: {fileID: 0}
   menuSet: {fileID: 0}
-  Coin: 0
-  itemsCount: 
+  Coin: 99990
+  itemsCount: 00000000000000000000000000000000
+  ItemPrice: 3200000064000000c800000064000000
+  coin: {fileID: 210902963}
+  count:
+  - {fileID: 741818723}
+  - {fileID: 1170679991}
+  - {fileID: 1083114834}
+  - {fileID: 1624285235}
 --- !u!1 &1384435881
 GameObject:
   m_ObjectHideFlags: 0
@@ -4460,8 +4465,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1667660044}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1351806819}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -4961,8 +4966,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1667660044}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1351806819}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -5048,7 +5053,6 @@ MonoBehaviour:
   - {fileID: 1794862220}
   - {fileID: 1197642977}
   pageIndex: 0
-  ItemPrice: 64000000640000006400000064000000
 --- !u!114 &1667660045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5707,7 +5711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1827906093}
   m_Layer: 5
-  m_Name: Item
+  m_Name: triple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,7 +9,7 @@ public class Shop : MonoBehaviour
     public GameManager gameManager;
     public GameObject[] Pages;
     public int pageIndex;
-    public int[] ItemPrice;
+    
 
     //상점 페이지 앞으로 넘기기
     public void NextPage()
@@ -33,16 +33,7 @@ public class Shop : MonoBehaviour
         }
     }
     //Buy Item
-    public void Buy(int index)
-    {
-        int price = ItemPrice[index];
-        if (gameManager.Coin >= price)  //가진 돈이 충분할 경우
-        {
-            gameManager.Coin -= price;
-            gameManager.itemsCount[index]++;
-        }
-        //Debug.Log(price);
-    }
+    
 
     //Exit
     public void ExitMain()

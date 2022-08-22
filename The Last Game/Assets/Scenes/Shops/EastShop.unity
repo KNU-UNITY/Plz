@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12714469}
   m_Layer: 5
-  m_Name: Item (2)
+  m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,8 +808,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192991637}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -1079,7 +1079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394394628}
   m_Layer: 5
-  m_Name: Item (1)
+  m_Name: powerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1223,7 +1223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 409268714}
   m_Layer: 5
-  m_Name: Item (3)
+  m_Name: potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1626,8 +1626,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192991637}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -1965,8 +1965,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192991637}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -3183,7 +3183,6 @@ MonoBehaviour:
   - {fileID: 1061866240}
   - {fileID: 184583068}
   pageIndex: 0
-  ItemPrice: 64000000640000006400000064000000
 --- !u!1 &1238912513
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,7 +3918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d74304e6a13990b449001070e2da8429, type: 3}
+  m_Sprite: {fileID: 1596307009, guid: b3a3f7b3bb359444f86e1323a13e3ff5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4502,8 +4501,15 @@ MonoBehaviour:
   scanObject: {fileID: 0}
   player: {fileID: 0}
   menuSet: {fileID: 0}
-  Coin: 0
-  itemsCount: 
+  Coin: 9999
+  itemsCount: 00000000000000000000000000000000
+  ItemPrice: 64000000640000006400000064000000
+  coin: {fileID: 2086259832}
+  count:
+  - {fileID: 1849506280}
+  - {fileID: 354140346}
+  - {fileID: 1058423726}
+  - {fileID: 131863096}
 --- !u!1 &1679840533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4514,7 +4520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679840534}
   m_Layer: 5
-  m_Name: Item
+  m_Name: triple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5533,7 +5539,7 @@ GameObject:
   - component: {fileID: 1958955769}
   - component: {fileID: 1958955768}
   m_Layer: 5
-  m_Name: item
+  m_Name: powerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5761,8 +5767,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1192991637}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
