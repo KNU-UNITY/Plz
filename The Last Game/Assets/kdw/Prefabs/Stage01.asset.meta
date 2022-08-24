@@ -1,12 +1,8 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:The Last Game/Assets/kdw/Prefabs/Stage01.asset.meta
-guid: 9783b4a6d92444b43ba4989900bffe71
-========
-guid: 7fe618a7d6a1d4068be610fab069434b
->>>>>>>> PSY:The Last Game/Assets/Sprites/Selfmade Sprites/Materials/portal.mat.meta
+guid: 2fe009e177846e546b54440164f150de
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 2100000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

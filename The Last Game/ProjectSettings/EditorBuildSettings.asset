@@ -45,6 +45,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Jeong Stage Decision.unity
     guid: 19d00581419294e8bb7d60156c831a9d
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 9db14dfd96995464a9e803b368ef024d
+  - enabled: 1
+    path: Assets/Scenes/Stage01.unity
+    guid: 01f6393854cc99c4881d177eb1745ef7
+  - enabled: 1
+    path: Assets/Scenes/Stage03.unity
+    guid: afd9e70e118ce1d4aa2d238c94139864
+  - enabled: 1
+    path: Assets/Scenes/Stage02.unity
+    guid: 3819b9e292d00124f936c0455d585f32
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 874a5617a75c79a459d6f0add60047fd
+  - enabled: 1
+    path: Assets/Scenes/GameClear.unity
+    guid: a91c148338c6a4b40b8191190fa31902
+  - enabled: 1
+    path: Assets/Scenes/ReadyStage.unity
+    guid: f1f8b1e6d515efa4483fcb8b65aabe14
+  - enabled: 1
     path: Assets/Scenes/Buk Stage Decision.unity
     guid: cab9c88ff6ff14f22899a148f929d143
   m_configObjects: {}
