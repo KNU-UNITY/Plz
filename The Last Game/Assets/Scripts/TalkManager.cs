@@ -22,10 +22,17 @@ public class TalkManager : MonoBehaviour
         //Talk Data
         //ObjIId ->Dong: 100, Seo : 200, Jeong : 300, Buk 400
         talkData.Add(100, new string[]{"동문으로 가는 포탈이라고 적혀 있다."});
+        talkData.Add(201,new string[]{"포탈 앞에서 스페이스 버튼을 눌러보자."});
+        talkData.Add(301,new string[]{"포탈 앞에서 스페이스 버튼을 눌러보자."});
+        talkData.Add(401,new string[]{"포탈 앞에서 스페이스 버튼을 눌러보자."});
+        talkData.Add(101,new string[]{"포탈 앞에서 스페이스 버튼을 눌러보자."});
         talkData.Add(200, new string[]{"서문으로 가는 포탈이라고 적혀 있다."});
         talkData.Add(300, new string[]{"정문으로 가는 포탈이라고 적혀 있다."});
         talkData.Add(400, new string[]{"북문으로 가는 포탈이라고 적혀 있다."});
-
+        talkData.Add(201,new string[]{"포탈 앞에서 스페이스 버튼을 눌러보자."});
+        talkData.Add(301,new string[]{"포탈 앞에서 스페이스 버튼을 눌러보자."});
+        talkData.Add(401,new string[]{"포탈 앞에서 스페이스 버튼을 눌러보자."});
+        talkData.Add(101,new string[]{"포탈 앞에서 스페이스 버튼을 눌러보자."});
     }
 
     public string GetTalk(int id, int talkIndex)
@@ -42,8 +49,4 @@ public class TalkManager : MonoBehaviour
             return talkData[id][talkIndex];
     }
 
-    public Sprite GetPortrait(int id, int portraitIndex)
-    {
-        return portraitData[id+portraitIndex];
-    }
 }

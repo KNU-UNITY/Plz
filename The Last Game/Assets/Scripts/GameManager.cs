@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public GameObject scanObject;
     public GameObject player;
     public GameObject menuSet;
+    public GameObject talkPanel;
+    public TalkManager talkManager;
+    public int talkPanelAnim;
+    public TextMeshProUGUI talkText;
     
     //Shop
     public int Coin;
@@ -23,8 +27,28 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI[] count;
      void Start()
      {
+         talkPanel.SetActive(false);
          GameLoad();
          //questText.text = questManager.CheckQuest();
+     }
+
+    //포탈 앞 안내데스크 구현 함수
+     public void Action(GameObject scanObj)
+     {
+         scanObject = scanObj;
+         talkPanel.SetActive(true);
+         switch(scanObject.name){
+             case "Dong Desk": talkText.text = "동문으로 가는 포탈이라고 적혀 있다."; break;
+             case "Seo Desk": talkText.text = "서문으로 가는 포탈이라고 적혀 있다."; break;
+             case "Jeong Desk": talkText.text = "정문으로 가는 포탈이라고 적혀 있다."; break;
+             case "Buk Desk": talkText.text = "북문으로 가는 포탈이라고 적혀 있다."; break;
+         }
+
+         Invoke("SetUnactive",1.5f);
+     }
+
+     public void SetUnactive(){
+         talkPanel.SetActive(false);
      }
 
     public void Update()
