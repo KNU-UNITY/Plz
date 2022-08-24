@@ -53,7 +53,7 @@ public class PlayerActionNonreal : MonoBehaviour
             dirVec = Vector3.right;
 
         //Scan Object
-        if(Input.GetButtonDown("Jump")&& scanObject != null && scanObject.CompareTag("Portal"))
+        if(Input.GetButtonDown("Jump")&& scanObject != null && !scanObject.CompareTag("desk"))
             PortalMove(scanObject);
         
         
@@ -104,6 +104,7 @@ public class PlayerActionNonreal : MonoBehaviour
         }
 
     else if(scanObject.CompareTag("Shop")==true){
+        Debug.Log("Shop");
         if(scanObject.name == "Bukmun Shop")
             SceneManager.LoadScene("NorthShop");
         else if(scanObject.name == "Seomun Shop")
