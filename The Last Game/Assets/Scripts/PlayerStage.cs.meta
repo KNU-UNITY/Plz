@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: d8fe60810f91f6948a73933fa1cf3974
+=======
+<<<<<<<< HEAD:The Last Game/Assets/Scripts/PlayerStage.cs.meta
+guid: 57bc2a6ee921a446ba61950a3e7049ee
+========
+guid: 603d56d21e4e1491f9695b88cb64074f
+>>>>>>>> KDW_PAST_2:The Last Game/Assets/Scripts/Boss.cs.meta
+>>>>>>> Stashed changes
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
