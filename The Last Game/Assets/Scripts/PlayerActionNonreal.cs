@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -53,8 +53,12 @@ public class PlayerActionNonreal : MonoBehaviour
             dirVec = Vector3.right;
 
         //Scan Object
-        if(Input.GetButtonDown("Jump")&& scanObject != null)
+        if(Input.GetButtonDown("Jump")&& scanObject != null && !scanObject.CompareTag("desk"))
             PortalMove(scanObject);
+        
+        
+        else if(Input.GetButtonDown("Jump")&& scanObject != null && scanObject.CompareTag("desk"))
+            manager.Action(scanObject);
 
 
         //flip character
@@ -83,6 +87,8 @@ public class PlayerActionNonreal : MonoBehaviour
             scanObject = null;
     }
 
+
+    //Scene Move Method
     public void PortalMove(GameObject scanObj)
     {
         scanObject = scanObj;
