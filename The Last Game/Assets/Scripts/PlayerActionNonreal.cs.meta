@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 864eb549388cd49c48e5ec4d51f5f597
+=======
+<<<<<<<< HEAD:The Last Game/Assets/Scripts/PlayerActionNonreal.cs.meta
+guid: 6caeae832c5c44421aa0e7b7a3c95cf0
+========
+guid: 409d62676dda64b539fc38511b97ff43
+>>>>>>>> KDW_PAST_2:The Last Game/Assets/Scripts/BossHPViewer.cs.meta
+>>>>>>> Stashed changes
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

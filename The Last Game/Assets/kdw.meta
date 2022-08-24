@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 2b2ff04a8cdd7ec4a8e5a3b76d310fa0
+<<<<<<<< HEAD:The Last Game/Assets/kdw.meta
+guid: 9c978601f559d49e5aed6bea25f95855
+========
+guid: dc210260e24bb44ffb5cd9b30e622e0c
+>>>>>>>> PSY:The Last Game/Assets/Sprites/Selfmade Sprites/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
