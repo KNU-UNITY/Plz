@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: a1d1fd0a5437b104a9222f2a5923b217
+=======
+<<<<<<<< HEAD:The Last Game/Assets/Scripts/Shop.cs.meta
+guid: 76fd0f3fcf7644a3899a526bcc15e64f
+========
+guid: 400309908b94d4ca29f43aec317495af
+>>>>>>>> KDW_PAST_2:The Last Game/Assets/Scripts/BGMController.cs.meta
+>>>>>>> Stashed changes
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
