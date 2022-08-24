@@ -53,7 +53,7 @@ public class PlayerActionNonreal : MonoBehaviour
             dirVec = Vector3.right;
 
         //Scan Object
-        if(Input.GetButtonDown("Jump")&& scanObject != null && scanObject.CompareTag("Portal"))
+        if(Input.GetButtonDown("Jump")&& scanObject != null && !scanObject.CompareTag("desk"))
             PortalMove(scanObject);
         
         
