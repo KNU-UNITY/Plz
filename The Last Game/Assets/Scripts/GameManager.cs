@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager control;
     public int cnt = 0;
     //퀘스트 쓸거면 아래 주석 해제하면 됨.
     //public QuestManager questManager;
@@ -19,27 +20,35 @@ public class GameManager : MonoBehaviour
     //Shop
     public int Coin;
     public int[] itemsCount;
+    
 
-    private void Awake()
+    void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
+        if(control == null)
+        {
+            control = this;
+        }
+        else if (control != this)
+        {
+            Destroy(gameObject);
+        }
+
+        
         Coin = PlayerPrefs.GetInt("Coin", 99999);
     }
     void Start()
      {
-        
-
-
         GameLoad();
         //questText.text = questManager.CheckQuest();
 
         // 맵 들어올 때 초기 위치 설정
-        
-
-
     }
 
     private void Update()
     {
+
         //Sub Menu
         if (Input.GetButtonDown("Cancel"))
         {
@@ -61,12 +70,24 @@ public class GameManager : MonoBehaviour
 
     public void GameSave()
      {
+        
          PlayerPrefs.SetFloat("PlayerX",player.transform.position.x);
          PlayerPrefs.SetFloat("PlayerY",player.transform.position.y);
          PlayerPrefs.SetInt("Coin",Coin);
-        //  PlayerPrefs.SetInt("QustId",questManager.questId);
-        //  PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
-         PlayerPrefs.Save();
+
+        if (SceneManager.GetActiveScene().name == "EastShop")
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                PlayerPrefs.SetInt("itemsCount" + i, itemsCount[i]);
+            }
+
+        }
+        
+
+            //  PlayerPrefs.SetInt("QustId",questManager.questId);
+            //  PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
+            PlayerPrefs.Save();
          menuSet.SetActive(false);
          Time.timeScale = 1;
 
@@ -92,18 +113,20 @@ public class GameManager : MonoBehaviour
 
      public void GameLoad()
      {
-         
+        
         if(!PlayerPrefs.HasKey("PlayerX")) return;
        
          float x = PlayerPrefs.GetFloat("PlayerX");
          float y = PlayerPrefs.GetFloat("PlayerY");
          PlayerPrefs.GetInt("Coin");
 
-        if (cnt == 1)
+        if (SceneManager.GetActiveScene().name == "EastShop")
         {
-            SceneChange_Buk();
-        }      
-   
+            for (int i = 0; i < 5; i++)
+            {
+                itemsCount[i] = PlayerPrefs.GetInt("itemsCount" + i);
+            }
+        }
          player.transform.position = new Vector3(x,y,0);
         //int questId = PlayerPrefs.GetInt("QustId");
         //int questActionIndex = PlayerPrefs.GetInt("QustActionIndex");
@@ -137,15 +160,24 @@ public class GameManager : MonoBehaviour
         {
             location();
         }
-
+        PlayerPrefs.DeleteKey("ItemsCount");
+        
         if (SceneManager.GetActiveScene().name == "Main Map")
         {
             float x = 0;
             float y = -3.0f;
             player.transform.position = new Vector3(x, y, 0);
         }
+
+        for (int i = 0; i < 5; i++)
+        {
+            itemsCount[i] = 0; 
+        }
+        PlayerPrefs.GetInt("itemsCount");
+
         Coin = 99999;
         PlayerPrefs.GetInt("Coin");
+
         //int questId = 0;
 
         //int questActionIndex = 0;
@@ -156,6 +188,13 @@ public class GameManager : MonoBehaviour
         //  questManager.ControlObject();
         Time.timeScale = 1;
      }
+
+
+
+
+
+
+
 
     public void SceneChange_Buk()
     {

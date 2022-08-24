@@ -679,7 +679,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02178592, y: 0.047000002}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.4783, y: -38.013}
+  m_AnchoredPosition: {x: -15.478287, y: -38.013}
   m_SizeDelta: {x: -9.0659, y: 119.8872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &184583070
@@ -1219,7 +1219,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2351,7 +2351,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3665,7 +3665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02178592, y: 0.047000002}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.4783, y: -38.013}
+  m_AnchoredPosition: {x: -15.478287, y: -38.013}
   m_SizeDelta: {x: -9.0659, y: 119.8872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061866242
@@ -4170,7 +4170,7 @@ MonoBehaviour:
   - {fileID: 1061866240}
   - {fileID: 184583068}
   pageIndex: 0
-  ItemPrice: 64000000640000006400000064000000
+  ItemPrice: 6400000064000000640000006400000064000000
 --- !u!1 &1238912513
 GameObject:
   m_ObjectHideFlags: 0
@@ -5390,7 +5390,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1599188469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1192991637}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1599188469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5454,7 +5466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643511552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 345.66666, y: 123.654, z: 0}
+  m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5473,11 +5485,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47626f41d8e941dab5a9ff4e075d6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cnt: 0
   scanObject: {fileID: 0}
   player: {fileID: 1192991632}
   menuSet: {fileID: 1979862266}
   Coin: 99999
-  itemsCount: 
+  itemsCount: 0000000000000000000000000000000000000000
 --- !u!1 &1679840533
 GameObject:
   m_ObjectHideFlags: 0
@@ -7089,7 +7102,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
