@@ -20,8 +20,11 @@ public class GameManager : MonoBehaviour
     
     //Shop
     public int Coin;
-    public int[] itemsCount;
+    public int[] itemsCount;  //[쉴드, 파워업, 폭탄]
     public int[] ItemPrice;
+    public int upgradeCount; //무기 업그레이드 횟수
+    public int[] potionCount; //문 별 회복포션 개수
+
     //UI
     public TextMeshProUGUI coin;
     public TextMeshProUGUI[] count;
@@ -116,5 +119,18 @@ public class GameManager : MonoBehaviour
             count[index].text = "X " + itemsCount[index].ToString();
         }
         
+    }
+    
+    //포션 구매
+    public void BuyPotion(int index)
+    {
+        int price = ItemPrice[0];
+        if(Coin >= price)
+        {
+            Coin -= price;
+            potionCount[index]++;
+            coin.text = Coin.ToString();
+            count[index].text = "X " + itemsCount[index].ToString();
+        }
     }
 }
