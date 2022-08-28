@@ -13,18 +13,45 @@ public class GameManager : MonoBehaviour
     public GameObject scanObject;
     public GameObject player;
     public GameObject menuSet;
+    public GameObject talkPanel;
+    public TalkManager talkManager;
+    public int talkPanelAnim;
+    public TextMeshProUGUI talkText;
     
     //Shop
     public int Coin;
-    public int[] itemsCount;
+    public int[] itemsCount;  //[쉴드, 파워업, 폭탄]
     public int[] ItemPrice;
+    public int upgradeCount; //무기 업그레이드 횟수
+    public int[] potionCount; //문 별 회복포션 개수
+
     //UI
     public TextMeshProUGUI coin;
     public TextMeshProUGUI[] count;
      void Start()
      {
+         talkPanel.SetActive(false);
          GameLoad();
          //questText.text = questManager.CheckQuest();
+     }
+
+    //포탈 앞 안내데스크 구현 함수
+     public void Action(GameObject scanObj)
+     {
+         scanObject = scanObj;
+         talkPanel.SetActive(true);
+         switch(scanObject.name){
+             case "Dong Desk": talkText.text = "동문으로 가는 포탈이라고 적혀 있다."; break;
+             case "Seo Desk": talkText.text = "서문으로 가는 포탈이라고 적혀 있다."; break;
+             case "Jeong Desk": talkText.text = "정문으로 가는 포탈이라고 적혀 있다."; break;
+             case "Buk Desk": talkText.text = "북문으로 가는 포탈이라고 적혀 있다."; break;
+         }
+
+         Invoke("SetUnactive",1.5f);
+     }
+
+     public void SetUnactive(){
+         talkPanel.SetActive(false);
      }
 
     public void Update()
@@ -92,5 +119,18 @@ public class GameManager : MonoBehaviour
             count[index].text = "X " + itemsCount[index].ToString();
         }
         
+    }
+    
+    //포션 구매
+    public void BuyPotion(int index)
+    {
+        int price = ItemPrice[0];
+        if(Coin >= price)
+        {
+            Coin -= price;
+            potionCount[index]++;
+            coin.text = Coin.ToString();
+            count[index].text = "X " + itemsCount[index].ToString();
+        }
     }
 }
