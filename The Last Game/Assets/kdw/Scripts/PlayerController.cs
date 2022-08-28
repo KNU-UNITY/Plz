@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    GameManager gameManager;
     [SerializeField]
     private string nextSceneName;
     [SerializeField]
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
         get => score;
     }
     private int coin;
-    public int Coin
+    public int Coin 
     {
         set => coin = Mathf.Max(0, value);
         get => coin;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
         movement2D = GetComponent<Movement2D>();
         weapon = GetComponent<Weapon>();
         animator = GetComponent<Animator>();
+      
     }
 
     private void Update()
@@ -79,7 +81,8 @@ public class PlayerController : MonoBehaviour
     public void OnDieEvent()
     {
         PlayerPrefs.SetInt("Score", score);
-        PlayerPrefs.SetInt("Coin", coin);
+        PlayerPrefs.SetInt("Coin", coin+ PlayerPrefs.GetInt("Coin"));
+        
         SceneManager.LoadScene(nextSceneName);
     }
 }

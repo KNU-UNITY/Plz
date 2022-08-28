@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
+
+        Coin = PlayerPrefs.GetInt("Coin");
         coin.text = Coin.ToString();
         count[0].text = "X " + itemsCount[0].ToString();
         count[1].text = "X " + itemsCount[1].ToString();
@@ -79,10 +81,9 @@ public class GameManager : MonoBehaviour
          if(!PlayerPrefs.HasKey("PlayerX")) return;
          float x = PlayerPrefs.GetFloat("PlayerX");
          float y = PlayerPrefs.GetFloat("PlayerY");
-         int coin = PlayerPrefs.GetInt("Coin");
+         
          //int questId = PlayerPrefs.GetInt("QustId");
          //int questActionIndex = PlayerPrefs.GetInt("QustActionIndex");
-         Coin = coin;
          player.transform.position = new Vector3(x,y,0);
         //  questManager.questId = questId;
         //  questManager.questActionIndex = questActionIndex;
@@ -98,8 +99,9 @@ public class GameManager : MonoBehaviour
      {
          float x = 0;
          float y = 0;
-         //int questId = 0;
-         int coin = 0;
+        //int questId = 0;
+        Coin = 0;
+        PlayerPrefs.GetInt("Coin", Coin);
          //int questActionIndex = 0;
          player.transform.position = new Vector3(x,y,0);
         //  questManager.questId = questId;
@@ -113,7 +115,7 @@ public class GameManager : MonoBehaviour
         int price = ItemPrice[index];
         if (Coin >= price)  //가진 돈이 충분할 경우
         {
-            Coin -= price;
+            PlayerPrefs.SetInt("Coin", Coin - price);
             itemsCount[index]++;
             coin.text = Coin.ToString();
             count[index].text = "X " + itemsCount[index].ToString();
@@ -127,7 +129,7 @@ public class GameManager : MonoBehaviour
         int price = ItemPrice[0];
         if(Coin >= price)
         {
-            Coin -= price;
+            PlayerPrefs.SetInt("Coin",Coin - price);
             potionCount[index]++;
             coin.text = Coin.ToString();
             count[index].text = "X " + itemsCount[index].ToString();

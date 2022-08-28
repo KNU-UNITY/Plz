@@ -58,7 +58,7 @@ public class PlayerActionNonreal : MonoBehaviour
         
         
         else if(Input.GetButtonDown("Jump")&& scanObject != null && scanObject.CompareTag("desk"))
-            manager.Action(scanObject);
+            //manager.Action(scanObject);
 
 
         //flip character
@@ -120,13 +120,12 @@ public class PlayerActionNonreal : MonoBehaviour
         else if(scanObject.name == "Seo 2nd Portal")
             SceneManager.LoadScene("Seo Stage Decision");
         else if(scanObject.name == "Dong 2nd Portal")
-            SceneManager.LoadScene("Dong Stage Decision");
+            SceneManager.LoadScene("Stage01");
         else if(scanObject.name == "Jeong 2nd Portal")
             SceneManager.LoadScene("Jeong Stage Decision");
     }
 
-    
-            
-        
+  
+
     }
 }
