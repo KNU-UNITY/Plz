@@ -83,7 +83,7 @@ public class PlayerActionNonreal : MonoBehaviour
             {
                 GameObject click_obj = hit.transform.gameObject;
                 Debug.Log(click_obj.name);
-                //WhatClick(click_obj);
+                WhatClick(click_obj);
             }
         }
     }
