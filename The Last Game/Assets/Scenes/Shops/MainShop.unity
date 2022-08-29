@@ -1187,7 +1187,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1761521014}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: ExitWest
+        m_MethodName: ExitMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

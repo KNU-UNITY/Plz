@@ -5779,7 +5779,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 564695050}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: ExitWest
+        m_MethodName: ExitEast
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

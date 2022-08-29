@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    GameManager gameManager;
     [SerializeField]
     private int damage = 1;
     [SerializeField]
@@ -44,7 +45,8 @@ public class Enemy : MonoBehaviour
     {
         playerController.Score += scorePoint;
         playerController.Coin += coinPoint;
-
+        //gameManager.Coin += coinPoint;
+        //Debug.Log("plz");
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         SpawnItem();
         Destroy(gameObject);
