@@ -60,6 +60,9 @@ public class PlayerActionNonreal : MonoBehaviour
         else if(Input.GetButtonDown("Jump")&& scanObject != null && scanObject.CompareTag("desk"))
             manager.Action(scanObject);
 
+        //Click Object
+        if(Input.GetKey(KeyCode.W)&& scanObject != null && scanObject.CompareTag("object"))
+            WhatClick(scanObject);
 
         //flip character
         if (Input.GetButtonDown("Horizontal"))
@@ -68,6 +71,20 @@ public class PlayerActionNonreal : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             rigid.AddForce(Vector2.up * 20, ForceMode2D.Impulse);
+        }
+
+        //Click
+        if(Input.GetMouseButtonDown(0))
+        {
+            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(pos,Vector2.zero,0f);
+
+            if(hit.collider != null)
+            {
+                GameObject click_obj = hit.transform.gameObject;
+                Debug.Log(click_obj.name);
+                //WhatClick(click_obj);
+            }
         }
     }
     void FixedUpdate()
@@ -103,31 +120,41 @@ public class PlayerActionNonreal : MonoBehaviour
             SceneManager.LoadScene("Buk Mun");
         }
 
-    else if(scanObject.CompareTag("Shop")==true){
-        Debug.Log("Shop");
-        if(scanObject.name == "Bukmun Shop")
-            SceneManager.LoadScene("NorthShop");
-        else if(scanObject.name == "Seomun Shop")
-            SceneManager.LoadScene("WestShop");
-        else if(scanObject.name == "Dongmun Shop")
-            SceneManager.LoadScene("EastShop");
-        else if(scanObject.name == "Jeongmun Shop")
-            SceneManager.LoadScene("MainShop");
+        else if(scanObject.CompareTag("Shop")==true){
+            Debug.Log("Shop");
+            if(scanObject.name == "Bukmun Shop")
+                SceneManager.LoadScene("NorthShop");
+            else if(scanObject.name == "Seomun Shop")
+                SceneManager.LoadScene("WestShop");
+            else if(scanObject.name == "Dongmun Shop")
+                SceneManager.LoadScene("EastShop");
+            else if(scanObject.name == "Jeongmun Shop")
+                SceneManager.LoadScene("MainShop");
+        }
+
+        else if(scanObject.CompareTag("2nd Portal")==true){
+            if(scanObject.name == "Buk 2nd Portal")
+                SceneManager.LoadScene("Buk Stage Decision");
+            else if(scanObject.name == "Seo 2nd Portal")
+                SceneManager.LoadScene("Seo Stage Decision");
+            else if(scanObject.name == "Dong 2nd Portal")
+                SceneManager.LoadScene("Dong Stage Decision");
+            else if(scanObject.name == "Jeong 2nd Portal")
+                SceneManager.LoadScene("Jeong Stage Decision");
+        }
     }
 
-    else if(scanObject.CompareTag("2nd Portal")==true){
-        if(scanObject.name == "Buk 2nd Portal")
-            SceneManager.LoadScene("Buk Stage Decision");
-        else if(scanObject.name == "Seo 2nd Portal")
-            SceneManager.LoadScene("Seo Stage Decision");
-        else if(scanObject.name == "Dong 2nd Portal")
-            SceneManager.LoadScene("Dong Stage Decision");
-        else if(scanObject.name == "Jeong 2nd Portal")
-            SceneManager.LoadScene("Jeong Stage Decision");
+    void WhatClick(GameObject obj){
+        if(scanObject.name == "Dstage 1")
+            SceneManager.LoadScene("Stage 1");
+        if(scanObject.name == "Dstage 2")
+            SceneManager.LoadScene("Stage 2");
+        if(scanObject.name == "Dstage 3")
+            SceneManager.LoadScene("Stage 3");
     }
 
     
             
         
     }
-}
+

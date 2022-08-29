@@ -11,6 +11,7 @@ TagManager:
   - Portal
   - 2nd Portal
   - desk
+  - enter
   layers:
   - Default
   - TransparentFX
