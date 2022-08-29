@@ -35,6 +35,7 @@ public class Item : MonoBehaviour
                 break;
             case ItemType.Boom:
                 player.GetComponent<Weapon>().BoomCount++;
+                PlayerPrefs.SetInt("itemsCount" + 3, PlayerPrefs.GetInt("itemsCount" + 3)+1);
                 break;
             case ItemType.HP:
                 player.GetComponent<PlayerHP>().CurrentHP+=2;

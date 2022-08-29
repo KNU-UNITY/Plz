@@ -14,11 +14,26 @@ public class PlayerController : MonoBehaviour
     private KeyCode KeyCodeAttack = KeyCode.Space;
     [SerializeField]
     private KeyCode keyCodeBoom = KeyCode.Z;
+    [SerializeField]
+    private KeyCode keyCodeHeal = KeyCode.X;
+    [SerializeField]
+    private KeyCode keyCodePower = KeyCode.C;
     private bool isDie = false;
     private Movement2D movement2D;
     private Weapon weapon;
     private Animator animator;
+    float timer;
+    int waitingTime;
+    bool inside;
 
+    void Start()
+    {
+        timer = 0.0f;
+        waitingTime = 2;
+        inside = false;
+    }
+
+    
     private int score;
     public int Score
     {
@@ -62,6 +77,18 @@ public class PlayerController : MonoBehaviour
         {
             weapon.StartBoom();
         }
+        if (Input.GetKeyDown(keyCodeHeal))
+        {
+            weapon.StartHeal();
+        }
+        if (Input.GetKeyDown(keyCodePower))
+        {
+            weapon.Attackchange();
+        }
+    }
+    void InvokeTest()
+    {
+        Debug.Log("Invoke Start!");
     }
 
     private void LateUpdate()

@@ -20,10 +20,10 @@ public class GameManager : MonoBehaviour
     
     //Shop
     public int Coin;
-    public int[] itemsCount;  //[쉴드, 파워업, 폭탄]
+    public int[] itemsCount = new int[4];  //[포션 전체 개수, 쉴드, 파워업, 폭탄]
     public int[] ItemPrice;
     public int upgradeCount; //무기 업그레이드 횟수
-    public int[] potionCount; //문 별 회복포션 개수
+    public int[] potionCount = new int[4]; //문 별 회복포션 개수
 
     //UI
     public TextMeshProUGUI coin;
@@ -59,19 +59,37 @@ public class GameManager : MonoBehaviour
 
         Coin = PlayerPrefs.GetInt("Coin");
         coin.text = Coin.ToString();
+        for (int i = 0; i < 4; i++)
+        {
+            itemsCount[i] = PlayerPrefs.GetInt("itemsCount" + i);
+        }
         count[0].text = "X " + itemsCount[0].ToString();
         count[1].text = "X " + itemsCount[1].ToString();
         count[2].text = "X " + itemsCount[2].ToString();
         count[3].text = "X " + itemsCount[3].ToString();
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    potionCount[i] = PlayerPrefs.GetInt("potionCount" + i);
+        //}
     }
     public void GameSave()
      {
          PlayerPrefs.SetFloat("PlayerX",player.transform.position.x);
          PlayerPrefs.SetFloat("PlayerY",player.transform.position.y);
          PlayerPrefs.SetInt("Coin", Coin);
+        for(int i = 0; i < 4; i++)
+        {
+            PlayerPrefs.SetInt("itemsCount" + i, itemsCount[i]);
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            PlayerPrefs.SetInt("potionCount" + i, potionCount[i]);
+        }
+
+
         //  PlayerPrefs.SetInt("QustId",questManager.questId);
         //  PlayerPrefs.SetInt("QustActionIndex",questManager.questActionIndex);
-         PlayerPrefs.Save();
+        PlayerPrefs.Save();
          menuSet.SetActive(false);
          Time.timeScale = 1;
      }
@@ -117,6 +135,7 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Coin", Coin - price);
             itemsCount[index]++;
+            PlayerPrefs.SetInt("itemsCount" + index, itemsCount[index]);
             coin.text = Coin.ToString();
             count[index].text = "X " + itemsCount[index].ToString();
         }

@@ -249,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &142364403
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1648,6 +1648,8 @@ MonoBehaviour:
   stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
   KeyCodeAttack: 32
   keyCodeBoom: 122
+  keyCodeHeal: 120
+  keyCodePower: 99
 --- !u!114 &1468295594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1660,7 +1662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccef9703f3ec5242993d163b70833e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerhp: {fileID: 1468295597}
   projectilePrefab: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
+  powerupprojectilePrefab: {fileID: 3036986315938941631, guid: c17941f6b05ed224ca37ab624c6a5c57, type: 3}
   attackRate: 0.1
   maxAttackLevel: 4
   boomPrefab: {fileID: 8210924418869867313, guid: 97f0e5346abc9204d97de8d247390804, type: 3}
@@ -1856,10 +1860,10 @@ MonoBehaviour:
   potionCount: 00000000000000000000000000000000
   coin: {fileID: 576704872}
   count:
-  - {fileID: 1923322715}
-  - {fileID: 2118718761}
-  - {fileID: 1082036031}
   - {fileID: 97233888}
+  - {fileID: 1082036031}
+  - {fileID: 2118718761}
+  - {fileID: 1923322715}
 --- !u!1 &1478511156
 GameObject:
   m_ObjectHideFlags: 0
