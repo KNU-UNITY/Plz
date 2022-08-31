@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Shop : MonoBehaviour
     public GameManager gameManager;
     public GameObject[] Pages;
     public int pageIndex;
-    
+    public Button btn; //업그레이드 버튼
 
     //상점 페이지 앞으로 넘기기
     public void NextPage()
@@ -53,5 +54,11 @@ public class Shop : MonoBehaviour
     public void ExitNorth()
     {
         SceneManager.LoadScene("Buk Mun");
+    }
+
+    public void UpgradeClicked()
+    {
+        gameManager.upgradeCount++;
+        btn.interactable = false;
     }
 }

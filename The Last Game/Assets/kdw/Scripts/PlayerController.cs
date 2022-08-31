@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    GameManager gameManager;
     [SerializeField]
     private string nextSceneName;
     [SerializeField]
@@ -13,11 +14,26 @@ public class PlayerController : MonoBehaviour
     private KeyCode KeyCodeAttack = KeyCode.Space;
     [SerializeField]
     private KeyCode keyCodeBoom = KeyCode.Z;
+    [SerializeField]
+    private KeyCode keyCodeHeal = KeyCode.X;
+    [SerializeField]
+    private KeyCode keyCodePower = KeyCode.C;
     private bool isDie = false;
     private Movement2D movement2D;
     private Weapon weapon;
     private Animator animator;
+    float timer;
+    int waitingTime;
+    bool inside;
 
+    void Start()
+    {
+        timer = 0.0f;
+        waitingTime = 2;
+        inside = false;
+    }
+
+    
     private int score;
     public int Score
     {
@@ -25,7 +41,7 @@ public class PlayerController : MonoBehaviour
         get => score;
     }
     private int coin;
-    public int Coin
+    public int Coin 
     {
         set => coin = Mathf.Max(0, value);
         get => coin;
@@ -36,6 +52,7 @@ public class PlayerController : MonoBehaviour
         movement2D = GetComponent<Movement2D>();
         weapon = GetComponent<Weapon>();
         animator = GetComponent<Animator>();
+      
     }
 
     private void Update()
@@ -60,6 +77,18 @@ public class PlayerController : MonoBehaviour
         {
             weapon.StartBoom();
         }
+        if (Input.GetKeyDown(keyCodeHeal))
+        {
+            weapon.StartHeal();
+        }
+        if (Input.GetKeyDown(keyCodePower))
+        {
+            weapon.Attackchange();
+        }
+    }
+    void InvokeTest()
+    {
+        Debug.Log("Invoke Start!");
     }
 
     private void LateUpdate()
@@ -79,7 +108,8 @@ public class PlayerController : MonoBehaviour
     public void OnDieEvent()
     {
         PlayerPrefs.SetInt("Score", score);
-        PlayerPrefs.SetInt("Coin", coin);
+        PlayerPrefs.SetInt("Coin", coin+ PlayerPrefs.GetInt("Coin"));
+        
         SceneManager.LoadScene(nextSceneName);
     }
 }

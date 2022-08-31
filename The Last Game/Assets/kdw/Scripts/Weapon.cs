@@ -5,7 +5,13 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField]
+    PlayerHP playerhp;
+    [SerializeField]
     private GameObject projectilePrefab;//공격할 때 생성되는 발사체 프리펩
+    [SerializeField]
+    private GameObject powerupprojectilePrefab;//파워업
+    [SerializeField]
+    private GameObject projectilePrefabtmp;
     [SerializeField]
     private float attackRate = 0.1f;//공격속도
     [SerializeField]
@@ -14,21 +20,22 @@ public class Weapon : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField]
     private GameObject boomPrefab;
-    private int boomCount = 3;
+    private int boomCount = PlayerPrefs.GetInt("itemsCount" + 3);
+    public int BoomCount
+    {
+        set => boomCount = Mathf.Max(0, value);
+        get => boomCount;
+    }
 
     public int AttackLevel
     {
         set => attackLevel = Mathf.Clamp(value, 1, maxAttackLevel);
         get => attackLevel;
     }
-    public int BoomCount
-    {
-        set => boomCount = Mathf.Max(0, value);
-        get => boomCount;
-    }
     //public int BoomCount => boomCount;
     private void Awake()
     {
+        boomCount = PlayerPrefs.GetInt("itemsCount" + 3);
         audioSource = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
@@ -85,14 +92,44 @@ public class Weapon : MonoBehaviour
                 break;
         }
     }
+    public void Attackchange()
+    {
+        if (PlayerPrefs.GetInt("itemsCount" + 2) > 0)
+        {
+            PlayerPrefs.SetInt("itemsCount" + 2, PlayerPrefs.GetInt("itemsCount" + 2) - 1);
+            projectilePrefabtmp = projectilePrefab;
+            projectilePrefab = powerupprojectilePrefab;
+            powerupprojectilePrefab = projectilePrefabtmp;
+            Invoke("changeoriginal", 2);
+
+        }
+    }
+    public void changeoriginal()
+    {
+        projectilePrefabtmp = projectilePrefab;
+        projectilePrefab = powerupprojectilePrefab;
+        powerupprojectilePrefab = projectilePrefabtmp;
+    }
 
     public void StartBoom()
     {
         if(boomCount>0)
         {
+           
             boomCount--;
+            PlayerPrefs.SetInt("itemsCount" + 3,boomCount);
             Instantiate(boomPrefab, transform.position, Quaternion.identity);
 
         }
     }
+    public void StartHeal()
+    {
+        if (PlayerPrefs.GetInt("itemsCount" + 0)> 0)
+        {
+            PlayerPrefs.SetInt("itemsCount" + 0, PlayerPrefs.GetInt("itemsCount" + 0) - 1);
+            playerhp.CurrentHP = playerhp.CurrentHP + 2;
+        }
+    }
+   
+
 }
