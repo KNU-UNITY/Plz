@@ -56,6 +56,20 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (menuSet.activeSelf)
+            {
+                menuSet.SetActive(false);
+                Time.timeScale = 1;
+            }
+
+            else
+            {
+                menuSet.SetActive(true);
+                Time.timeScale = 0;
+            }
+        }
 
         Coin = PlayerPrefs.GetInt("Coin");
         coin.text = Coin.ToString();
@@ -115,11 +129,11 @@ public class GameManager : MonoBehaviour
 
      public void GameReset()
      {
+        PlayerPrefs.DeleteAll();
          float x = 0;
          float y = 0;
         //int questId = 0;
-        Coin = 0;
-        PlayerPrefs.GetInt("Coin", Coin);
+        
          //int questActionIndex = 0;
          player.transform.position = new Vector3(x,y,0);
         //  questManager.questId = questId;
