@@ -60,9 +60,9 @@ public class PlayerActionNonreal : MonoBehaviour
         else if(Input.GetButtonDown("Jump")&& scanObject != null && scanObject.CompareTag("desk"))
             manager.Action(scanObject);
 
-        //Click Object
-        if(Input.GetKey(KeyCode.W)&& scanObject != null && scanObject.CompareTag("object"))
-            WhatClick(scanObject);
+        // Click Object
+        // if(Input.GetKey(KeyCode.W)&& scanObject != null && scanObject.CompareTag("object"))
+        //     WhatClick(scanObject);
 
         //flip character
         if (Input.GetButtonDown("Horizontal"))
@@ -74,18 +74,19 @@ public class PlayerActionNonreal : MonoBehaviour
         }
 
         //Click
-        if(Input.GetMouseButtonDown(0))
-        {
-            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(pos,Vector2.zero,0f);
+        // if(Input.GetMouseButtonDown(0))
+        // {
+        //     Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //     RaycastHit2D hit = Physics2D.Raycast(pos,Vector2.zero,0f);
 
-            if(hit.collider != null)
-            {
-                GameObject click_obj = hit.transform.gameObject;
-                Debug.Log(click_obj.name);
-                WhatClick(click_obj);
-            }
-        }
+        //     if(hit.collider != null)
+        //     {
+        //         GameObject click_obj = hit.transform.gameObject;
+        //         Debug.Log(click_obj.name);
+        //         WhatClick(click_obj);
+        //     }
+        // }
+
     }
     void FixedUpdate()
     {
@@ -144,13 +145,25 @@ public class PlayerActionNonreal : MonoBehaviour
         }
     }
 
+    void OnTriggerStay2D(Collider2D collision){
+        if(collision.gameObject.tag == "enter" && Input.GetKey(KeyCode.Return)){
+            Debug.Log("Enter");
+            WhatClick(collision.gameObject);
+               
+        }
+    }
+
     void WhatClick(GameObject obj){
-        if(scanObject.name == "Dstage 1")
-            SceneManager.LoadScene("Stage 1");
-        if(scanObject.name == "Dstage 2")
-            SceneManager.LoadScene("Stage 2");
-        if(scanObject.name == "Dstage 3")
-            SceneManager.LoadScene("Stage 3");
+        // if(Input.GetKeyDown("w"))
+        //     {
+                Debug.Log("button");
+                if(obj.name == "Dstage 1")
+                    SceneManager.LoadScene("Stage01");
+                if(obj.name == "Dstage 2")
+                    SceneManager.LoadScene("Stage02");
+                if(obj.name == "Dstage 3")
+                    SceneManager.LoadScene("Stage03");
+            //}
     }
 
     

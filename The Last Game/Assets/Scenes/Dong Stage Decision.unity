@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 587148226}
   m_Layer: 0
   m_Name: Dstage 2
-  m_TagString: Untagged
+  m_TagString: enter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 598411586}
   m_Layer: 0
   m_Name: Dstage 3
-  m_TagString: Untagged
+  m_TagString: enter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2231,7 +2231,7 @@ GameObject:
   - component: {fileID: 1232008417}
   m_Layer: 0
   m_Name: Dstage 1
-  m_TagString: Untagged
+  m_TagString: enter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
