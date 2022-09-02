@@ -12,6 +12,11 @@ TagManager:
   - 2nd Portal
   - desk
   - enter
+  - Boss
+  - EnemyProjectile
+  - Meteorite
+  - Shield
+  - return
   layers:
   - Default
   - TransparentFX
