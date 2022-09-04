@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerActionNonreal : MonoBehaviour
 {
     public GameManager manager;
+    public StageClearCheck SCC;
     GameObject scanObject;
     public float speed;
     float h;
@@ -92,18 +93,12 @@ public class PlayerActionNonreal : MonoBehaviour
     public void PortalMove(GameObject scanObj)
     {
         scanObject = scanObj;
-        if(scanObject.CompareTag("Portal")==true){
-            if(scanObject.name == "Dong Portal")
-            SceneManager.LoadScene("Dong Mun");
-        else if(scanObject.name == "Seo Portal")
-            SceneManager.LoadScene("Seo Mun");
-        else if(scanObject.name == "Jeong Portal")
-            SceneManager.LoadScene("Jeong Mun");
-        else if(scanObject.name == "Buk Portal")
-            SceneManager.LoadScene("Buk Mun");
-        }
-
-        else if(scanObject.CompareTag("Shop")==true){
+        Debug.Log("PortalMove");
+        if(scanObject.CompareTag("Portal")==true)
+            SCC.PortalEnter(scanObject);
+        
+        
+        if(scanObject.CompareTag("Shop")==true){
             Debug.Log("Shop");
             if(scanObject.name == "Bukmun Shop")
                 SceneManager.LoadScene("NorthShop");
@@ -140,20 +135,9 @@ public class PlayerActionNonreal : MonoBehaviour
     }
 
     void WhatClick(GameObject obj){
-        // if(Input.GetKeyDown("w"))
-        //     {
-                Debug.Log("button");
-                if(obj.name == "Dstage 1")
-                    SceneManager.LoadScene("Stage01");
-                if(obj.name == "Dstage 2")
-                    SceneManager.LoadScene("Stage02");
-                if(obj.name == "Dstage 3")
-                    SceneManager.LoadScene("Stage03");
-            //}
+        Debug.Log("button");
+        SCC.StageEnter(SceneManager.GetActiveScene().name,obj);
     }
-
-    
-            
         
-    }
+}
 

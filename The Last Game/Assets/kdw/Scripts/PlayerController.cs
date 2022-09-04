@@ -42,12 +42,12 @@ public class PlayerController : MonoBehaviour
 
     {
         if (isDie == true) return;
-        //¹æÇâ Å°¸¦ ´­·¯ ÀÌµ¿ ¹æÇâ ¼³Á¤
+        //ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
         movement2D.MoveTo(new Vector3(x, y, 0));
-        //°ø°Ý Å°¸¦ Down/UpÀ¸·Î °ø°Ý ½ÃÀÛ/Á¾·á
+        //ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ Down/Upï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
         if(Input.GetKeyDown(KeyCodeAttack))
         {
             weapon.StartFiring();
@@ -80,6 +80,16 @@ public class PlayerController : MonoBehaviour
     {
         PlayerPrefs.SetInt("Score", score);
         PlayerPrefs.SetInt("Coin", coin);
-        SceneManager.LoadScene(nextSceneName);
+        string stageName = SceneManager.GetActiveScene().name;
+        int stageNum = int.Parse(stageName.Substring(stageName.Length-2));
+
+        if(stageNum <=3)
+            SceneManager.LoadScene("Dong Stage Decision");
+        else if(stageNum <=6)
+            SceneManager.LoadScene("Seo Stage Decision");
+        else if(stageNum <=9)
+            SceneManager.LoadScene("Jeong Stage Decision");
+        else if(stageNum <=12)
+            SceneManager.LoadScene("Buk Stage Decision");
     }
 }
