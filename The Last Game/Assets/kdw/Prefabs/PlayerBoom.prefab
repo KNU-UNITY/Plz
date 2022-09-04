@@ -144,7 +144,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   boomAudio: {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}
-  damage: 100
+  damage: 30
 --- !u!82 &3939969159678816293
 AudioSource:
   m_ObjectHideFlags: 0

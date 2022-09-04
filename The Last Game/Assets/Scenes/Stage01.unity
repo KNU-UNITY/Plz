@@ -567,7 +567,7 @@ MonoBehaviour:
   panelBossHP: {fileID: 1695607323}
   boss: {fileID: 1827710601}
   spawnTime: 0.35
-  maxEnemyCount: 100
+  maxEnemyCount: 20
 --- !u!4 &191006093
 Transform:
   m_ObjectHideFlags: 0
@@ -1665,6 +1665,7 @@ MonoBehaviour:
   playerhp: {fileID: 1468295597}
   projectilePrefab: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
   powerupprojectilePrefab: {fileID: 3036986315938941631, guid: c17941f6b05ed224ca37ab624c6a5c57, type: 3}
+  projectilePrefabtmp: {fileID: 0}
   attackRate: 0.1
   maxAttackLevel: 4
   boomPrefab: {fileID: 8210924418869867313, guid: 97f0e5346abc9204d97de8d247390804, type: 3}
