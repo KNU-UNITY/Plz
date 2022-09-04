@@ -59,6 +59,7 @@ public class Shop : MonoBehaviour
     public void UpgradeClicked()
     {
         gameManager.upgradeCount++;
+        gameManager.Coin -= 100;
         btn.interactable = false;
     }
 }
