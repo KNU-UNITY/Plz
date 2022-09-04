@@ -58,7 +58,8 @@ public class Shop : MonoBehaviour
 
     public void UpgradeClicked()
     {
-        gameManager.upgradeCount++;
+        PlayerPrefs.SetInt("upgradeCount",PlayerPrefs.GetInt("upgradeCount")+1);
+        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") - 100);
         btn.interactable = false;
     }
 }

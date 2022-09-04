@@ -51,7 +51,7 @@ public class Boss : MonoBehaviour
     }
     private IEnumerator Phase01()
     {
-        if(SceneManager.GetActiveScene().name == "Stage01")
+        if(SceneManager.GetActiveScene().name == "Stage01"|| (SceneManager.GetActiveScene().name == "Stage06"))
         {
             bossWeapon.StartFiring(AttackType.SingleFireToCenterPosition);
             while(true)

@@ -20,6 +20,16 @@ public class Weapon : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField]
     private GameObject boomPrefab;
+    [SerializeField]
+    private GameObject projectileLv1;
+    [SerializeField]
+    private GameObject projectileLv2;
+    [SerializeField]
+    private GameObject projectileLv3;
+    [SerializeField]
+    private GameObject projectileLv4;
+    [SerializeField]
+    private GameObject projectileLv0;
     private int boomCount = PlayerPrefs.GetInt("itemsCount" + 3);
     public int BoomCount
     {
@@ -37,6 +47,26 @@ public class Weapon : MonoBehaviour
     {
         boomCount = PlayerPrefs.GetInt("itemsCount" + 3);
         audioSource = GetComponent<AudioSource>();
+        if(PlayerPrefs.GetInt("upgradeCount") == 1)
+        {
+            projectilePrefab = projectileLv1;
+        }
+        else if (PlayerPrefs.GetInt("upgradeCount") == 2)
+        {
+            projectilePrefab = projectileLv2;
+        }
+        else if (PlayerPrefs.GetInt("upgradeCount") == 3)
+        {
+            projectilePrefab = projectileLv3;
+        }
+        else if (PlayerPrefs.GetInt("upgradeCount") == 4)
+        {
+            projectilePrefab = projectileLv4;
+        }
+        else 
+        {
+            projectilePrefab = projectileLv0;
+        }
     }
     // Start is called before the first frame update
     public void StartFiring()
