@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum AttackType {  CircleFire=0,SingleFireToCenterPosition}
+public enum AttackType {  CircleFire=0,SingleFireToCenterPosition, TripleFireToCenterPosition, PentaFireToCenterPosition }
 public class BossWeapon : MonoBehaviour
 {
     [SerializeField]
@@ -16,7 +16,6 @@ public class BossWeapon : MonoBehaviour
     public void StopFiring(AttackType attackType)
     {
         StopCoroutine(attackType.ToString());
-
     }
     private IEnumerator CircleFire()
     {
@@ -53,8 +52,51 @@ public class BossWeapon : MonoBehaviour
             Vector3 direction = (targetPosition - clone.transform.position).normalized;
 
             clone.GetComponent<Movement2D>().MoveTo(direction);
-
+            
             yield return new WaitForSeconds(attackRate);
         }
     }
+    private IEnumerator TripleFireToCenterPosition()
+    {
+        Vector3 targetPosition = Vector3.zero;
+        float attackRate = 0.1f;
+
+        while (true)
+        {
+            GameObject clone = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Vector3 direction = (targetPosition - clone.transform.position).normalized;
+
+            clone.GetComponent<Movement2D>().MoveTo(direction);
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            clone = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            clone.GetComponent<Movement2D>().MoveTo(new Vector3(-0.2f, -1, 0));
+            clone = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            clone.GetComponent<Movement2D>().MoveTo(new Vector3(0.2f, -1, 0));
+            yield return new WaitForSeconds(attackRate);
+        }
+    }
+    private IEnumerator PentaFireToCenterPosition()
+    {
+        Vector3 targetPosition = Vector3.zero;
+        float attackRate = 0.1f;
+
+        while (true)
+        {
+            GameObject clone = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Vector3 direction = (targetPosition - clone.transform.position).normalized;
+
+            clone.GetComponent<Movement2D>().MoveTo(direction);
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            clone = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            clone.GetComponent<Movement2D>().MoveTo(new Vector3(-0.3f, -1, 0));
+            clone = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            clone.GetComponent<Movement2D>().MoveTo(new Vector3(0.3f, -1, 0));
+            clone = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            clone.GetComponent<Movement2D>().MoveTo(new Vector3(-0.6f, -1, 0));
+            clone = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            clone.GetComponent<Movement2D>().MoveTo(new Vector3(0.6f, -1, 0));
+            yield return new WaitForSeconds(attackRate);
+        }
+    }
+
 }
