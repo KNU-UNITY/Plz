@@ -1246,7 +1246,6 @@ MonoBehaviour:
   - {fileID: 1891910305}
   - {fileID: 2013637987}
   pageIndex: 0
-  btn: {fileID: 1726717359}
 --- !u!114 &564695051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,18 +2116,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1643511555}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: BuyPotion
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &823862082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2549,7 +2536,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3746,7 +3733,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643511554}
-  - component: {fileID: 1643511553}
   - component: {fileID: 1643511555}
   m_Layer: 0
   m_Name: GameManager
@@ -3755,18 +3741,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1643511553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643511552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f84c08594d4ba54bb3a628104a2173a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1643511554
 Transform:
   m_ObjectHideFlags: 0
@@ -3802,14 +3776,13 @@ MonoBehaviour:
   talkPanelAnim: 0
   talkText: {fileID: 0}
   Coin: 9999
-  itemsCount: 00000000000000000000000000000000
-  ItemPrice: 64000000640000006400000064000000
+  itemsCount: 000000000000000000000000
+  ItemPrice: 000000000000000000000000
   upgradeCount: 0
-  potionCount: 
+  btn: {fileID: 1726717359}
   coin: {fileID: 2086259832}
   count:
   - {fileID: 1849506280}
-  - {fileID: 0}
   - {fileID: 1058423726}
   - {fileID: 131863096}
 --- !u!1 &1670415494
@@ -3848,7 +3821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: -68}
+  m_AnchoredPosition: {x: 130, y: -68}
   m_SizeDelta: {x: 40, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670415496
@@ -4046,8 +4019,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 564695050}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1643511555}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: UpgradeClicked
         m_Mode: 1
         m_Arguments:
@@ -4704,7 +4677,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

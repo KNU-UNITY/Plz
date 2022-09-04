@@ -756,7 +756,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2696,7 +2696,6 @@ MonoBehaviour:
   - {fileID: 587507957}
   - {fileID: 560430677}
   pageIndex: 0
-  btn: {fileID: 1148327543}
 --- !u!114 &919470698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2960,16 +2959,15 @@ MonoBehaviour:
   talkPanelAnim: 0
   talkText: {fileID: 0}
   Coin: 9999
-  itemsCount: 00000000000000000000000000000000
+  itemsCount: 000000000000000000000000
   ItemPrice: 00000000000000000000000000000000
   upgradeCount: 0
-  potionCount: 00000000000000000000000000000000
-  coin: {fileID: 0}
+  btn: {fileID: 1148327543}
+  coin: {fileID: 48711833}
   count:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1417786376}
+  - {fileID: 376864392}
+  - {fileID: 10922346}
 --- !u!1 &991037125
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,8 +3303,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919470697}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 983216934}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: UpgradeClicked
         m_Mode: 1
         m_Arguments:
@@ -4057,7 +4055,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
