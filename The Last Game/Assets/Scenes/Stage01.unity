@@ -1669,6 +1669,11 @@ MonoBehaviour:
   attackRate: 0.1
   maxAttackLevel: 4
   boomPrefab: {fileID: 8210924418869867313, guid: 97f0e5346abc9204d97de8d247390804, type: 3}
+  projectileLv1: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
+  projectileLv2: {fileID: 3036986315938941631, guid: 69b7451907cb49d499f6889a8c9a59cd, type: 3}
+  projectileLv3: {fileID: 3036986315938941631, guid: 3974c8381a21c42449d4d7880099cd21, type: 3}
+  projectileLv4: {fileID: 3036986315938941631, guid: 0d082bf3ae700464da1668ab09b53e23, type: 3}
+  projectileLv0: {fileID: 3036986315938941631, guid: 1181d029d8f7c594e97cdeff1a187108, type: 3}
 --- !u!50 &1468295595
 Rigidbody2D:
   serializedVersion: 4

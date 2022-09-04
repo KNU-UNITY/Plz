@@ -1282,6 +1282,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4933525600149835278, guid: 502dc2929b75d794faa7530122e9af69, type: 3}
+      propertyPath: moveSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 502dc2929b75d794faa7530122e9af69, type: 3}
@@ -1562,7 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96108a81a419854c895bce5b5df3245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 7.5
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!212 &1468295591
 SpriteRenderer:
@@ -1663,12 +1667,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerhp: {fileID: 1468295597}
-  projectilePrefab: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
+  projectilePrefab: {fileID: 3036986315938941631, guid: 0d082bf3ae700464da1668ab09b53e23, type: 3}
   powerupprojectilePrefab: {fileID: 3036986315938941631, guid: c17941f6b05ed224ca37ab624c6a5c57, type: 3}
   projectilePrefabtmp: {fileID: 0}
-  attackRate: 0.1
+  attackRate: 0.2
   maxAttackLevel: 3
   boomPrefab: {fileID: 8210924418869867313, guid: 97f0e5346abc9204d97de8d247390804, type: 3}
+  projectileLv1: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
+  projectileLv2: {fileID: 3036986315938941631, guid: 69b7451907cb49d499f6889a8c9a59cd, type: 3}
+  projectileLv3: {fileID: 3036986315938941631, guid: 3974c8381a21c42449d4d7880099cd21, type: 3}
+  projectileLv4: {fileID: 3036986315938941631, guid: 0d082bf3ae700464da1668ab09b53e23, type: 3}
 --- !u!50 &1468295595
 Rigidbody2D:
   serializedVersion: 4
