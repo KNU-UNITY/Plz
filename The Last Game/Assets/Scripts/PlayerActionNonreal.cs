@@ -14,7 +14,7 @@ public class PlayerActionNonreal : MonoBehaviour
     Vector3 dirVec;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
-    
+    Animator anim;
    
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class PlayerActionNonreal : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -43,14 +43,31 @@ public class PlayerActionNonreal : MonoBehaviour
         isHorizonMove = false;
 
         //Direction
-        if(vDown && v ==1)
+        if (vDown && v == 1)
+        {
             dirVec = Vector3.up;
-        else if(vDown && v == -1)
+            anim.SetBool("isBack", true);
+            anim.SetBool("isSide", false);
+
+        }
+        else if (vDown && v == -1)
+        {
             dirVec = Vector3.down;
-        else if(hDown && h == -1)
+            anim.SetBool("isBack", false);
+            anim.SetBool("isSide", false);
+        }
+        else if (hDown && h == -1)
+        {
             dirVec = Vector3.left;
-            else if(hDown && h == 1)
+            anim.SetBool("isSide", true);
+            anim.SetBool("isBack", false);
+        }
+        else if (hDown && h == 1)
+        {
             dirVec = Vector3.right;
+            anim.SetBool("isSide", true);
+            anim.SetBool("isBack", false);
+        }
 
         //Scan Object
         if(Input.GetButtonDown("Jump")&& scanObject != null && !scanObject.CompareTag("desk"))
@@ -58,17 +75,14 @@ public class PlayerActionNonreal : MonoBehaviour
         
         
         else if(Input.GetButtonDown("Jump")&& scanObject != null && scanObject.CompareTag("desk"))
-            //manager.Action(scanObject);
+            manager.Action(scanObject);
 
 
         //flip character
-        if (Input.GetButtonDown("Horizontal"))
+        if (hDown)
             spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
-        //jump
-        if (Input.GetButtonDown("Jump"))
-        {
-            rigid.AddForce(Vector2.up * 20, ForceMode2D.Impulse);
-        }
+        else if(vDown)
+            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == 1;
     }
     void FixedUpdate()
     {
@@ -120,12 +134,13 @@ public class PlayerActionNonreal : MonoBehaviour
         else if(scanObject.name == "Seo 2nd Portal")
             SceneManager.LoadScene("Seo Stage Decision");
         else if(scanObject.name == "Dong 2nd Portal")
-            SceneManager.LoadScene("Stage01");
+            SceneManager.LoadScene("Dong Stage Decision");
         else if(scanObject.name == "Jeong 2nd Portal")
             SceneManager.LoadScene("Jeong Stage Decision");
     }
 
-  
-
+    
+            
+        
     }
 }

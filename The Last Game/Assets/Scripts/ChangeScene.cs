@@ -6,11 +6,10 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public GameManager gm;
-    
+
     void Awake()
     {
         gm = GetComponent<GameManager>();
-
     }
 
     public void ChangeScenebtn()
