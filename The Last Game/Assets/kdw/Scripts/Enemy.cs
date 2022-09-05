@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    GameManager gameManager;
     [SerializeField]
     private int damage = 1;
     [SerializeField]
@@ -44,7 +45,8 @@ public class Enemy : MonoBehaviour
     {
         playerController.Score += scorePoint;
         playerController.Coin += coinPoint;
-
+        //gameManager.Coin += coinPoint;
+        //Debug.Log("plz");
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         SpawnItem();
         Destroy(gameObject);
@@ -52,11 +54,11 @@ public class Enemy : MonoBehaviour
     private void SpawnItem()
     {
         int spawnItem = Random.Range(0, 100);
-        if(spawnItem<7)
+        if(spawnItem<5)
         {
             Instantiate(itemPrefabs[0], transform.position, Quaternion.identity);
         }
-        else if(spawnItem<10)
+        else if(spawnItem<8)
         {
             Instantiate(itemPrefabs[1], transform.position, Quaternion.identity);
         }
@@ -64,7 +66,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(itemPrefabs[2], transform.position, Quaternion.identity);
         }
-        else if(spawnItem<20)
+        else if(spawnItem<15)
         {
             Instantiate(itemPrefabs[3], transform.position, Quaternion.identity);
         }

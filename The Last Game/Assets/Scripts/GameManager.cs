@@ -34,20 +34,32 @@ public class GameManager : MonoBehaviour
          //questText.text = questManager.CheckQuest();
      }
 
-    //포탈 앞 안내데스크 구현 함수
+//포탈 앞 안내데스크 구현 함수
      public void Action(GameObject scanObj)
      {
          scanObject = scanObj;
          talkPanel.SetActive(true);
          switch(scanObject.name){
-             case "Dong Desk": talkText.text = "동문으로 가는 포탈이라고 적혀 있다."; break;
-             case "Seo Desk": talkText.text = "서문으로 가는 포탈이라고 적혀 있다."; break;
-             case "Jeong Desk": talkText.text = "정문으로 가는 포탈이라고 적혀 있다."; break;
-             case "Buk Desk": talkText.text = "북문으로 가는 포탈이라고 적혀 있다."; break;
+             case "Dong Desk": talkText.text = "동문으로 가는 포탈이라고 적혀 있다.\n포탈 앞에서 스페이스 버튼을 눌러보자."; break;
+             case "Seo Desk": talkText.text = "서문으로 가는 포탈이라고 적혀 있다.\n포탈 앞에서 스페이스 버튼을 눌러보자."; break;
+             case "Jeong Desk": talkText.text = "정문으로 가는 포탈이라고 적혀 있다.\n포탈 앞에서 스페이스 버튼을 눌러보자."; break;
+             case "Buk Desk": talkText.text = "북문으로 가는 포탈이라고 적혀 있다.\n포탈 앞에서 스페이스 버튼을 눌러보자."; break;
          }
 
          Invoke("SetUnactive",1.5f);
      }
+
+     //잠겨 있는 스테이지 및 맵에 들어가려고 할 때 안내 구현 함수
+        public void UnlockInfo(string info)
+        {
+            Debug.Log("UnlockInfo");
+            talkPanel.SetActive(true);
+            if(info == "stage")
+                talkText.text = "이전 스테이지를 클리어해야 열리는 스테이지입니다.";
+            else if(info == "map")
+                talkText.text = "이전 맵의 스테이지들을 모두 클리어해야 열리는 맵입니다.\n맵의 순서는 동문, 서문, 정문, 북문입니다.";
+            Invoke("SetUnactive",2.5f);
+        }
 
      public void SetUnactive(){
          talkPanel.SetActive(false);
@@ -151,6 +163,13 @@ public class GameManager : MonoBehaviour
 
     public void UpgradeClicked()
     {
-        btn.interactable = false;
+        int price = ItemPrice[1];
+        if(Coin >= price)
+        {
+            PlayerPrefs.SetInt("upgradeCount",PlayerPrefs.GetInt("upgradeCount")+1);
+            PlayerPrefs.SetInt("Coin",Coin - price);
+            coin.text = Coin.ToString();
+            btn.interactable = false;
+        }
     }
 }

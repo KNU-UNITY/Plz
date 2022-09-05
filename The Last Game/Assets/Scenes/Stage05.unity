@@ -559,15 +559,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
-  enemyPrefab: {fileID: 4796747783846037301, guid: 32f050609fd45dd4299f9568d1407eb6, type: 3}
+  enemyPrefab: {fileID: 4796747783846037301, guid: 5b60942d120ac574785e9793c149251d, type: 3}
   enemyHPSliderPrefab: {fileID: 2921216230706463152, guid: bba10abeb2e3fc34baa0ecc5c156c3cd, type: 3}
   canvasTransform: {fileID: 701674209}
   bgmController: {fileID: 1527795282}
   textBossWarning: {fileID: 1495626969}
   panelBossHP: {fileID: 1695607323}
   boss: {fileID: 1827710601}
-  spawnTime: 0.35
-  maxEnemyCount: 20
+  spawnTime: 0.85
+  maxEnemyCount: 70
 --- !u!4 &191006093
 Transform:
   m_ObjectHideFlags: 0
@@ -1032,7 +1032,7 @@ Transform:
   m_GameObject: {fileID: 782333475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 9.9, z: 0}
-  m_LocalScale: {x: 0.87, y: 0.78, z: 1}
+  m_LocalScale: {x: 2.48, y: 0.78, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1133,7 +1133,7 @@ Transform:
   m_GameObject: {fileID: 901149543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.87, y: 0.78, z: 1}
+  m_LocalScale: {x: 2.48, y: 0.78, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1281,6 +1281,10 @@ PrefabInstance:
     - target: {fileID: 4933525600149835277, guid: 502dc2929b75d794faa7530122e9af69, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933525600149835278, guid: 502dc2929b75d794faa7530122e9af69, type: 3}
+      propertyPath: moveSpeed
+      value: 7.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -1562,7 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96108a81a419854c895bce5b5df3245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 7.5
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!212 &1468295591
 SpriteRenderer:
@@ -1663,17 +1667,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerhp: {fileID: 1468295597}
-  projectilePrefab: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
+  projectilePrefab: {fileID: 3036986315938941631, guid: 0d082bf3ae700464da1668ab09b53e23, type: 3}
   powerupprojectilePrefab: {fileID: 3036986315938941631, guid: c17941f6b05ed224ca37ab624c6a5c57, type: 3}
   projectilePrefabtmp: {fileID: 0}
-  attackRate: 0.1
-  maxAttackLevel: 4
+  attackRate: 0.2
+  maxAttackLevel: 3
   boomPrefab: {fileID: 8210924418869867313, guid: 97f0e5346abc9204d97de8d247390804, type: 3}
   projectileLv1: {fileID: 3036986315938941631, guid: 034b92fd562cb29438469378f0d474b0, type: 3}
   projectileLv2: {fileID: 3036986315938941631, guid: 69b7451907cb49d499f6889a8c9a59cd, type: 3}
   projectileLv3: {fileID: 3036986315938941631, guid: 3974c8381a21c42449d4d7880099cd21, type: 3}
   projectileLv4: {fileID: 3036986315938941631, guid: 0d082bf3ae700464da1668ab09b53e23, type: 3}
-  projectileLv0: {fileID: 3036986315938941631, guid: 1181d029d8f7c594e97cdeff1a187108, type: 3}
 --- !u!50 &1468295595
 Rigidbody2D:
   serializedVersion: 4
@@ -2570,7 +2573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f423bb2c310375488c6e3200245318f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1000
+  maxHP: 400
 --- !u!1 &1852888489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,5 +2969,5 @@ MonoBehaviour:
   stageData: {fileID: 11400000, guid: 2fe009e177846e546b54440164f150de, type: 2}
   alertLinePrefab: {fileID: 8882113136356876340, guid: 8ded3570a7ec9d54cb49860ee62bbdef, type: 3}
   meteoritePrefab: {fileID: 2484238494524138101, guid: c7357bc776076da4683543d58aa34548, type: 3}
-  minSpawnTime: 1
-  maxSpawnTime: 4
+  minSpawnTime: 5
+  maxSpawnTime: 10

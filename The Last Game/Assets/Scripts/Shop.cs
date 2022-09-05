@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    //¾ÆÀÌÅÛ [Æ÷¼Ç,½¯µå,ÆÄ¿ö ¾÷,Æ®¸®ÇÃ]
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½Ä¿ï¿½ ï¿½ï¿½,Æ®ï¿½ï¿½ï¿½ï¿½]
     public GameManager gameManager;
     public GameObject[] Pages;
     public int pageIndex;
     
 
-    //»óÁ¡ ÆäÀÌÁö ¾ÕÀ¸·Î ³Ñ±â±â
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ±ï¿½ï¿½
     public void NextPage()
     {
         if (pageIndex == 0)
@@ -23,7 +23,7 @@ public class Shop : MonoBehaviour
         }
 
     }
-    //»óÁ¡ ÆäÀÌÁö µÚ·Î ³Ñ±â±â
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½ ï¿½Ñ±ï¿½ï¿½
     public void PrePage()
     {
         if (pageIndex == 1)
@@ -55,5 +55,4 @@ public class Shop : MonoBehaviour
     {
         SceneManager.LoadScene("Buk Mun");
     }
-
 }
