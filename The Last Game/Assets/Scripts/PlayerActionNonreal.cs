@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerActionNonreal : MonoBehaviour
 {
     public GameManager manager;
+    public StageClearCheck SCC;
     GameObject scanObject;
     public float speed;
     float h;
@@ -14,7 +15,7 @@ public class PlayerActionNonreal : MonoBehaviour
     Vector3 dirVec;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
-    Animator anim;
+    
    
 
     // Start is called before the first frame update
@@ -22,7 +23,7 @@ public class PlayerActionNonreal : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -43,31 +44,14 @@ public class PlayerActionNonreal : MonoBehaviour
         isHorizonMove = false;
 
         //Direction
-        if (vDown && v == 1)
-        {
+        if(vDown && v ==1)
             dirVec = Vector3.up;
-            anim.SetBool("isBack", true);
-            anim.SetBool("isSide", false);
-
-        }
-        else if (vDown && v == -1)
-        {
+        else if(vDown && v == -1)
             dirVec = Vector3.down;
-            anim.SetBool("isBack", false);
-            anim.SetBool("isSide", false);
-        }
-        else if (hDown && h == -1)
-        {
+        else if(hDown && h == -1)
             dirVec = Vector3.left;
-            anim.SetBool("isSide", true);
-            anim.SetBool("isBack", false);
-        }
-        else if (hDown && h == 1)
-        {
+            else if(hDown && h == 1)
             dirVec = Vector3.right;
-            anim.SetBool("isSide", true);
-            anim.SetBool("isBack", false);
-        }
 
         //Scan Object
         if(Input.GetButtonDown("Jump")&& scanObject != null && !scanObject.CompareTag("desk"))
@@ -77,12 +61,15 @@ public class PlayerActionNonreal : MonoBehaviour
         else if(Input.GetButtonDown("Jump")&& scanObject != null && scanObject.CompareTag("desk"))
             manager.Action(scanObject);
 
-
         //flip character
-        if (hDown)
+        if (Input.GetButtonDown("Horizontal"))
             spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
-        else if(vDown)
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == 1;
+        //jump
+        if (Input.GetButtonDown("Jump"))
+        {
+            rigid.AddForce(Vector2.up * 20, ForceMode2D.Impulse);
+        }
+
     }
     void FixedUpdate()
     {
@@ -106,41 +93,51 @@ public class PlayerActionNonreal : MonoBehaviour
     public void PortalMove(GameObject scanObj)
     {
         scanObject = scanObj;
-        if(scanObject.CompareTag("Portal")==true){
-            if(scanObject.name == "Dong Portal")
-            SceneManager.LoadScene("Dong Mun");
-        else if(scanObject.name == "Seo Portal")
-            SceneManager.LoadScene("Seo Mun");
-        else if(scanObject.name == "Jeong Portal")
-            SceneManager.LoadScene("Jeong Mun");
-        else if(scanObject.name == "Buk Portal")
-            SceneManager.LoadScene("Buk Mun");
+        Debug.Log("PortalMove");
+        if(scanObject.CompareTag("Portal")==true)
+            SCC.PortalEnter(scanObject);
+        
+        
+        else if(scanObject.CompareTag("Shop")==true){
+            Debug.Log("Shop");
+            if(scanObject.name == "Bukmun Shop")
+                SceneManager.LoadScene("NorthShop");
+            else if(scanObject.name == "Seomun Shop")
+                SceneManager.LoadScene("WestShop");
+            else if(scanObject.name == "Dongmun Shop")
+                SceneManager.LoadScene("EastShop");
+            else if(scanObject.name == "Jeongmun Shop")
+                SceneManager.LoadScene("MainShop");
         }
 
-    else if(scanObject.CompareTag("Shop")==true){
-        if(scanObject.name == "Bukmun Shop")
-            SceneManager.LoadScene("NorthShop");
-        else if(scanObject.name == "Seomun Shop")
-            SceneManager.LoadScene("WestShop");
-        else if(scanObject.name == "Dongmun Shop")
-            SceneManager.LoadScene("EastShop");
-        else if(scanObject.name == "Jeongmun Shop")
-            SceneManager.LoadScene("MainShop");
+        else if(scanObject.CompareTag("2nd Portal")==true){
+            if(scanObject.name == "Buk 2nd Portal")
+                SceneManager.LoadScene("Buk Stage Decision");
+            else if(scanObject.name == "Seo 2nd Portal")
+                SceneManager.LoadScene("Seo Stage Decision");
+            else if(scanObject.name == "Dong 2nd Portal")
+                SceneManager.LoadScene("Dong Stage Decision");
+            else if(scanObject.name == "Jeong 2nd Portal")
+                SceneManager.LoadScene("Jeong Stage Decision");
+        }
+
+        else if(scanObject.CompareTag("return")==true){
+            SceneManager.LoadScene("Main Map");
+        }
     }
 
-    else if(scanObject.CompareTag("2nd Portal")==true){
-        if(scanObject.name == "Buk 2nd Portal")
-            SceneManager.LoadScene("Buk Stage Decision");
-        else if(scanObject.name == "Seo 2nd Portal")
-            SceneManager.LoadScene("Seo Stage Decision");
-        else if(scanObject.name == "Dong 2nd Portal")
-            SceneManager.LoadScene("Dong Stage Decision");
-        else if(scanObject.name == "Jeong 2nd Portal")
-            SceneManager.LoadScene("Jeong Stage Decision");
+    void OnTriggerStay2D(Collider2D collision){
+        if(collision.gameObject.tag == "enter" && Input.GetKey(KeyCode.Return)){
+            Debug.Log("Enter");
+            WhatClick(collision.gameObject);
+               
+        }
     }
 
-    
-            
+    void WhatClick(GameObject obj){
+        Debug.Log("button");
+        SCC.StageEnter(SceneManager.GetActiveScene().name,obj);
+    }
         
-    }
 }
+
