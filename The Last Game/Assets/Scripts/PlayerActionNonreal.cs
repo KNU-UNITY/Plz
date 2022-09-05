@@ -98,7 +98,7 @@ public class PlayerActionNonreal : MonoBehaviour
             SCC.PortalEnter(scanObject);
         
         
-        if(scanObject.CompareTag("Shop")==true){
+        else if(scanObject.CompareTag("Shop")==true){
             Debug.Log("Shop");
             if(scanObject.name == "Bukmun Shop")
                 SceneManager.LoadScene("NorthShop");
