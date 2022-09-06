@@ -5504,7 +5504,7 @@ MonoBehaviour:
   talkText: {fileID: 0}
   Coin: 0
   itemsCount: 000000000000000000000000
-  ItemPrice: 
+  ItemPrice: 00000000000000000000000000000000
   upgradeCount: 0
   btn: {fileID: 0}
   coin: {fileID: 2091888891}

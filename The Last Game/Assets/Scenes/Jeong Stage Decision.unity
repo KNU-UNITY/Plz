@@ -1954,6 +1954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1571405171}
   - component: {fileID: 1571405170}
+  - component: {fileID: 1571405177}
   - component: {fileID: 1571405169}
   - component: {fileID: 1571405173}
   - component: {fileID: 1571405175}
@@ -1979,6 +1980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  SCC: {fileID: 0}
   speed: 5
 --- !u!212 &1571405170
 SpriteRenderer:
@@ -2060,6 +2062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8fe60810f91f6948a73933fa1cf3974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scanObject: {fileID: 0}
 --- !u!50 &1571405174
 Rigidbody2D:
   serializedVersion: 4
@@ -2117,6 +2120,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1571405177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571405166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb709fd2d40ff4e069fc75dd5a90d79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GM: {fileID: 0}
 --- !u!4 &1657290320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1224392861243821742, guid: e25962a23b0ae06459d988ce85f4476e, type: 3}

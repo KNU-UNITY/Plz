@@ -93,17 +93,4 @@ public class PlayerStage : MonoBehaviour
         //        SceneManager.LoadScene("Stage03");
         //}
     }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "board")
-        {
-            Debug.Log("ÀÎ½Ä");
-            if (collision.gameObject.name == "Stage1")
-                SceneManager.LoadScene("Stage01");
-            else if (scanObject.name == "Stage2")
-                SceneManager.LoadScene("Stage02");
-            else if (scanObject.name == "Stage3")
-                SceneManager.LoadScene("Stage03");
-        }
-    }
 }
