@@ -152,6 +152,7 @@ public class Boss : MonoBehaviour
     {
         GameObject clone = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         clone.GetComponent<BossExplosion>().Setup(playerController, nextSceneName);
-        Destroy(gameObject);    
+        Destroy(gameObject);   
+        
     }
 }
