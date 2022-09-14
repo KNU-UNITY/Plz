@@ -140,7 +140,6 @@ MonoBehaviour:
   - {fileID: 6367791470609480280, guid: 64d7b9f655dc6cf4cbc8b2825f350afd, type: 3}
   - {fileID: 3799666668139570773, guid: 0dd299c32c363a24bbd2cf4e8008e7d3, type: 3}
   - {fileID: 3799666668139570773, guid: 42c3bcfc48d35e247990420a260c48cc, type: 3}
-  shootDelay: 1
 --- !u!114 &-6616884004843854147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,4 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e61802d1c6a4e6549a8121148f030fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 6
+  maxHP: 5

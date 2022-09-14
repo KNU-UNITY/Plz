@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
     private GameObject projectileLv4;
     [SerializeField]
     private GameObject projectileLv0;
-    private int boomCount = PlayerPrefs.GetInt("itemsCount" + 3);
+    private int boomCount = PlayerPrefs.GetInt("itemsCount" + 2);
     public int BoomCount
     {
         set => boomCount = Mathf.Max(0, value);
@@ -45,7 +45,7 @@ public class Weapon : MonoBehaviour
     //public int BoomCount => boomCount;
     private void Awake()
     {
-        boomCount = PlayerPrefs.GetInt("itemsCount" + 3);
+        boomCount = PlayerPrefs.GetInt("itemsCount" + 2);
         audioSource = GetComponent<AudioSource>();
         if(PlayerPrefs.GetInt("upgradeCount") == 1)
         {
@@ -124,9 +124,9 @@ public class Weapon : MonoBehaviour
     }
     public void Attackchange()
     {
-        if (PlayerPrefs.GetInt("itemsCount" + 2) > 0)
+        if (PlayerPrefs.GetInt("itemsCount" + 1) > 0)
         {
-            PlayerPrefs.SetInt("itemsCount" + 2, PlayerPrefs.GetInt("itemsCount" + 2) - 1);
+            PlayerPrefs.SetInt("itemsCount" + 1, PlayerPrefs.GetInt("itemsCount" + 1) - 1);
             projectilePrefabtmp = projectilePrefab;
             projectilePrefab = powerupprojectilePrefab;
             powerupprojectilePrefab = projectilePrefabtmp;
@@ -147,7 +147,7 @@ public class Weapon : MonoBehaviour
         {
            
             boomCount--;
-            PlayerPrefs.SetInt("itemsCount" + 3,boomCount);
+            PlayerPrefs.SetInt("itemsCount" + 2,boomCount);
             Instantiate(boomPrefab, transform.position, Quaternion.identity);
 
         }

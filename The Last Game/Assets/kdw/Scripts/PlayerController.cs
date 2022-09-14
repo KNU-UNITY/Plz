@@ -22,17 +22,8 @@ public class PlayerController : MonoBehaviour
     private Movement2D movement2D;
     private Weapon weapon;
     private Animator animator;
-    float timer;
-    int waitingTime;
-    bool inside;
 
-    void Start()
-    {
-        timer = 0.0f;
-        waitingTime = 2;
-        inside = false;
-    }
-
+   
     
     private int score;
     public int Score
