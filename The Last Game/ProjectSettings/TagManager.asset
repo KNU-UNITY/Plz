@@ -11,12 +11,7 @@ TagManager:
   - Portal
   - 2nd Portal
   - desk
-  - enter
-  - Boss
-  - EnemyProjectile
-  - Meteorite
-  - Shield
-  - return
+  - board
   layers:
   - Default
   - TransparentFX
@@ -27,7 +22,7 @@ TagManager:
   - Shop
   - Object
   - Platform
-  - 
+  - board
   - 
   - 
   - 

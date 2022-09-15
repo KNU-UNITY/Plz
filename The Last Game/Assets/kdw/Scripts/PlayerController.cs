@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    GameManager gameManager;
     [SerializeField]
     private string nextSceneName;
     [SerializeField]
@@ -13,11 +14,26 @@ public class PlayerController : MonoBehaviour
     private KeyCode KeyCodeAttack = KeyCode.Space;
     [SerializeField]
     private KeyCode keyCodeBoom = KeyCode.Z;
+    [SerializeField]
+    private KeyCode keyCodeHeal = KeyCode.X;
+    [SerializeField]
+    private KeyCode keyCodePower = KeyCode.C;
     private bool isDie = false;
     private Movement2D movement2D;
     private Weapon weapon;
     private Animator animator;
+    float timer;
+    int waitingTime;
+    bool inside;
 
+    void Start()
+    {
+        timer = 0.0f;
+        waitingTime = 2;
+        inside = false;
+    }
+
+    
     private int score;
     public int Score
     {
@@ -25,7 +41,7 @@ public class PlayerController : MonoBehaviour
         get => score;
     }
     private int coin;
-    public int Coin
+    public int Coin 
     {
         set => coin = Mathf.Max(0, value);
         get => coin;
@@ -36,18 +52,19 @@ public class PlayerController : MonoBehaviour
         movement2D = GetComponent<Movement2D>();
         weapon = GetComponent<Weapon>();
         animator = GetComponent<Animator>();
+      
     }
 
     private void Update()
 
     {
         if (isDie == true) return;
-        //ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //¹æÇâ Å°¸¦ ´­·¯ ÀÌµ¿ ¹æÇâ ¼³Á¤
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
         movement2D.MoveTo(new Vector3(x, y, 0));
-        //ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ Down/Upï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
+        //°ø°Ý Å°¸¦ Down/UpÀ¸·Î °ø°Ý ½ÃÀÛ/Á¾·á
         if(Input.GetKeyDown(KeyCodeAttack))
         {
             weapon.StartFiring();
@@ -60,6 +77,18 @@ public class PlayerController : MonoBehaviour
         {
             weapon.StartBoom();
         }
+        if (Input.GetKeyDown(keyCodeHeal))
+        {
+            weapon.StartHeal();
+        }
+        if (Input.GetKeyDown(keyCodePower))
+        {
+            weapon.Attackchange();
+        }
+    }
+    void InvokeTest()
+    {
+        Debug.Log("Invoke Start!");
     }
 
     private void LateUpdate()
@@ -79,17 +108,8 @@ public class PlayerController : MonoBehaviour
     public void OnDieEvent()
     {
         PlayerPrefs.SetInt("Score", score);
-        PlayerPrefs.SetInt("Coin", coin);
-        string stageName = SceneManager.GetActiveScene().name;
-        int stageNum = int.Parse(stageName.Substring(stageName.Length-2));
-
-        if(stageNum <=3)
-            SceneManager.LoadScene("Dong Stage Decision");
-        else if(stageNum <=6)
-            SceneManager.LoadScene("Seo Stage Decision");
-        else if(stageNum <=9)
-            SceneManager.LoadScene("Jeong Stage Decision");
-        else if(stageNum <=12)
-            SceneManager.LoadScene("Buk Stage Decision");
+        PlayerPrefs.SetInt("Coin", coin+ PlayerPrefs.GetInt("Coin"));
+        
+        SceneManager.LoadScene(nextSceneName);
     }
 }

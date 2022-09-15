@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStage : MonoBehaviour
 {
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
     Animator anim;
+    public GameObject scanObject;
+
     int maxSpeed = 5;
     int jumpPower = 12;
     void Awake()
@@ -26,8 +29,21 @@ public class PlayerStage : MonoBehaviour
         else if (rigid.velocity.x < maxSpeed * (-1))  //Left Max Speed
             rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
 
+        ////Draw Ray front
+        //Vector2 frontVec = new Vector2(rigid.position.x + 0.5f, rigid.position.y + 1f);
+        //Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
+        //RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 0.9f, LayerMask.GetMask("board"));
+        //if (rayHit.collider != null)
+        //{
+        //    scanObject = rayHit.collider.gameObject;
+        //    Debug.Log(scanObject);
+        //}
+        //else
+        //    scanObject = null;
+
+        
         //Jump
-        if(rigid.velocity.y < 0)
+        if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
             RaycastHit2D rayhit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
@@ -65,5 +81,16 @@ public class PlayerStage : MonoBehaviour
             anim.SetBool("isWalking", true);
         else
             anim.SetBool("isWalking", false);
+
+        ////Move to game
+        //if(Input.GetKey(KeyCode.E) && scanObject != null)
+        //{
+        //    if (scanObject.name == "Stage1")
+        //        SceneManager.LoadScene("Stage01");
+        //    else if (scanObject.name == "Stage2")
+        //        SceneManager.LoadScene("Stage02");
+        //    else if (scanObject.name == "Stage3")
+        //        SceneManager.LoadScene("Stage03");
+        //}
     }
 }
