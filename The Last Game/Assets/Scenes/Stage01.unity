@@ -3338,7 +3338,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1827710603}
   - component: {fileID: 1827710602}
+  - component: {fileID: 1827710610}
   - component: {fileID: 1827710604}
+  - component: {fileID: 1827710609}
   - component: {fileID: 1827710605}
   - component: {fileID: 1827710606}
   - component: {fileID: 1827710607}
@@ -3476,7 +3478,8 @@ MonoBehaviour:
   bossAppearPoint: 2.5
   explosionPrefab: {fileID: 2152168264983622745, guid: b32ce102db5034f40b2dfb132dfbe8da, type: 3}
   playerController: {fileID: 1598622622}
-  nextSceneName: GameOver
+  nextSceneName: Dong Stage Decision
+  SCC: {fileID: 1827710610}
 --- !u!114 &1827710607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3503,6 +3506,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 500
+--- !u!114 &1827710609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827710601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47626f41d8e941dab5a9ff4e075d6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanObject: {fileID: 0}
+  player: {fileID: 0}
+  menuSet: {fileID: 0}
+  talkPanel: {fileID: 0}
+  talkManager: {fileID: 0}
+  talkPanelAnim: 0
+  talkText: {fileID: 0}
+  Coin: 0
+  itemsCount: 000000000000000000000000
+  ItemPrice: 
+  upgradeCount: 0
+  btn: {fileID: 0}
+  coin: {fileID: 0}
+  count: []
+--- !u!114 &1827710610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827710601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb709fd2d40ff4e069fc75dd5a90d79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GM: {fileID: 1827710609}
 --- !u!1 &1852888489
 GameObject:
   m_ObjectHideFlags: 0
