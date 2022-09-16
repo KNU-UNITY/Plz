@@ -15,9 +15,6 @@ public class Enemy : MonoBehaviour
     private GameObject explosionPrefab;
     [SerializeField]
     private GameObject[] itemPrefabs;
-    [SerializeField]
-    private float shootDelay=1.0f;
-    private float shootTimer = 0;
     private EnemyWeapon enemyWeapon;
     private PlayerController playerController;
 

@@ -7,6 +7,7 @@ public class BossExplosion : MonoBehaviour
 {
     private PlayerController playerController;
     private string sceneName;
+    public StageClearCheck SCC;
 
     public void Setup(PlayerController playerController,string sceneName)
     {
@@ -20,6 +21,8 @@ public class BossExplosion : MonoBehaviour
         PlayerPrefs.SetInt("Score", playerController.Score);
         playerController.Coin += 1000;
         PlayerPrefs.SetInt("Coin", playerController.Coin);
-        SceneManager.LoadScene(sceneName);
+
+        
     }
+
 }
