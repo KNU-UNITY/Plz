@@ -23,7 +23,7 @@ public class BossExplosion : MonoBehaviour
         PlayerPrefs.SetInt("Coin", playerController.Coin);
 
         //스테이지 클리어하면 2차월 배열에 1입력
-        SCC.StageCheck(SceneManager.GetActiveScene().name);
+        //SCC.StageCheck(SceneManager.GetActiveScene().name);
 
         //게임 클리어 하면 각 문 맵으로 돌아감
         switch(SceneManager.GetActiveScene().name)

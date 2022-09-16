@@ -3476,7 +3476,7 @@ MonoBehaviour:
   bossAppearPoint: 2.5
   explosionPrefab: {fileID: 2152168264983622745, guid: b32ce102db5034f40b2dfb132dfbe8da, type: 3}
   playerController: {fileID: 1598622622}
-  nextSceneName: Dong Stage Decision
+  nextSceneName: GameOver
 --- !u!114 &1827710607
 MonoBehaviour:
   m_ObjectHideFlags: 0
