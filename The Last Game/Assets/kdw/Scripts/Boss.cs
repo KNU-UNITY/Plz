@@ -22,6 +22,7 @@ public class Boss : MonoBehaviour
     private Movement2D movement2D;
     private BossWeapon bossWeapon;
     private BossHP bossHP;
+    public StageClearCheck SCC;
     private void Awake()
     {
         movement2D = GetComponent<Movement2D>();
@@ -151,8 +152,34 @@ public class Boss : MonoBehaviour
     public void OnDie()
     {
         GameObject clone = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        //clone.GetComponent<BossExplosion>().Setup(playerController, nextSceneName);
-        Destroy(gameObject);   
+        Destroy(gameObject);
+        //스테이지 클리어하면 2차월 배열에 1입력
+        SCC.StageCheck(SceneManager.GetActiveScene().name);
+
+        //게임 클리어 하면 각 문 맵으로 돌아감
+        switch(SceneManager.GetActiveScene().name)
+        {
+            case "Stage01":
+            case "Stage02":
+            case "Stage03":
+                SceneManager.LoadScene("Dong Mun");
+                break;
+            case "Stage04":
+            case "Stage05":
+            case  "Stage06":
+                SceneManager.LoadScene("Seo Mun");
+                break;
+            case "Stage07":
+            case "Stage08":
+            case "Stage09":
+                SceneManager.LoadScene("Jeong Mun");
+                break;
+            case "Stage10":
+            case "Stage11":
+            case "Stage12":
+                SceneManager.LoadScene("Buk Mun");
+                    break;
+        }
         
     }
 }
