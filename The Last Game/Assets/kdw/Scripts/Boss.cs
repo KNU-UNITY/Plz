@@ -151,7 +151,7 @@ public class Boss : MonoBehaviour
     public void OnDie()
     {
         GameObject clone = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        clone.GetComponent<BossExplosion>().Setup(playerController, nextSceneName);
+        //clone.GetComponent<BossExplosion>().Setup(playerController, nextSceneName);
         Destroy(gameObject);   
         
     }
