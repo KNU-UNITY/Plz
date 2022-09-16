@@ -135,6 +135,10 @@ PrefabInstance:
       value: Dstage 3
       objectReference: {fileID: 0}
     - target: {fileID: 4863355952554908545, guid: d39672cc18ccd9545840277c51264e6f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863355952554908545, guid: d39672cc18ccd9545840277c51264e6f, type: 3}
       propertyPath: m_TagString
       value: enter
       objectReference: {fileID: 0}
@@ -392,6 +396,10 @@ PrefabInstance:
     - target: {fileID: 4863355952554908545, guid: d39672cc18ccd9545840277c51264e6f, type: 3}
       propertyPath: m_Name
       value: Dstage 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863355952554908545, guid: d39672cc18ccd9545840277c51264e6f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4863355952554908545, guid: d39672cc18ccd9545840277c51264e6f, type: 3}
       propertyPath: m_TagString
@@ -1432,6 +1440,10 @@ PrefabInstance:
       value: Dstage 2
       objectReference: {fileID: 0}
     - target: {fileID: 4863355952554908545, guid: d39672cc18ccd9545840277c51264e6f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863355952554908545, guid: d39672cc18ccd9545840277c51264e6f, type: 3}
       propertyPath: m_TagString
       value: enter
       objectReference: {fileID: 0}
@@ -2426,6 +2438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8fe60810f91f6948a73933fa1cf3974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scanObject: {fileID: 0}
 --- !u!70 &1509047621
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2495,6 +2508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb709fd2d40ff4e069fc75dd5a90d79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 0}
 --- !u!1001 &1649220715
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -112,7 +112,7 @@ public class StageClearCheck : MonoBehaviour
                         SceneManager.LoadScene("Stage11");
                     else GM.UnlockInfo("stage");
                 }
-                else if(obj.name == "Dstage 4"){
+                else if(obj.name == "Bstage 3"){
                     if(stageCheck[3,2]==1)
                         SceneManager.LoadScene("Stage12");
                     else GM.UnlockInfo("stage");
