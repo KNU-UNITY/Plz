@@ -3180,7 +3180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f423bb2c310375488c6e3200245318f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1000
+  maxHP: 1200
 --- !u!1 &1828581555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,7 +3702,7 @@ MonoBehaviour:
   alertLinePrefab: {fileID: 8882113136356876340, guid: 8ded3570a7ec9d54cb49860ee62bbdef, type: 3}
   meteoritePrefab: {fileID: 2484238494524138101, guid: c7357bc776076da4683543d58aa34548, type: 3}
   minSpawnTime: 1
-  maxSpawnTime: 4
+  maxSpawnTime: 2
 --- !u!1 &2144908920
 GameObject:
   m_ObjectHideFlags: 0

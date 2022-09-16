@@ -496,8 +496,8 @@ MonoBehaviour:
   textBossWarning: {fileID: 1495626969}
   panelBossHP: {fileID: 1695607323}
   boss: {fileID: 1827710601}
-  spawnTime: 0.35
-  maxEnemyCount: 20
+  spawnTime: 0.5
+  maxEnemyCount: 50
 --- !u!4 &191006093
 Transform:
   m_ObjectHideFlags: 0
@@ -3502,7 +3502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f423bb2c310375488c6e3200245318f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1000
+  maxHP: 500
 --- !u!1 &1852888489
 GameObject:
   m_ObjectHideFlags: 0
